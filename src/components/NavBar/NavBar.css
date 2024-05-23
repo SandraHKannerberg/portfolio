@@ -1,5 +1,5 @@
 .navbar {
-    height: 6rem;
+    height: 5rem;
     width: 100vw;
     max-width: 85rem;
     margin: 0 auto;
@@ -14,8 +14,8 @@
 
 .logo {
     object-fit: cover;
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 .desktopMenuListItem {

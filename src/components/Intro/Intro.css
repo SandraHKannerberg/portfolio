@@ -1,0 +1,58 @@
+#intro {
+    height: calc(100vh - 6rem);
+    width: 100vw;
+    max-width: 85rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.profileImage {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.introContent {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: #ff83cd;
+}
+
+.introDescription {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.hireMeBtn {
+    background: rgb(255,131,205);
+    background: linear-gradient(128deg, rgba(255,131,205,1) 47%, rgba(139,186,233,1) 100%);
+    color: #171120;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    width: 8rem;
+    margin-top: 1rem;
+}
