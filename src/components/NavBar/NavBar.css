@@ -1,0 +1,44 @@
+.navbar {
+    height: 6rem;
+    width: 100vw;
+    max-width: 85rem;
+    margin: 0 auto;
+    padding: 1 rem 2 rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+}
+
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.desktopMenuListItem:hover {
+    color: #ff83cd;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #ff83cd;
+
+}
+
+.desktopMenuBtn {
+    background: rgb(255,131,205);
+    background: linear-gradient(128deg, rgba(255,131,205,1) 47%, rgba(139,186,233,1) 100%);
+    color: #171120;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
