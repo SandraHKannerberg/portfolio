@@ -9,11 +9,11 @@
 
 .profileImage {
     position: absolute;
-    top: -2rem;
-    right: 0;
+    top: 3rem;
+    right: 2vw;
     z-index: -1;
     object-fit: cover;
-    height: 100vh;
+    height: 70vh;
 }
 
 .introContent {
@@ -55,4 +55,22 @@
     font-family: "Poppins", sans-serif;
     width: 8rem;
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 685px) {
+    .profileImage {
+        right: -10vw;
+    }
+    .introContent {
+        font-size: 8vw;
+    }
+    .hello {
+        font-size: 4.5vw;
+    } 
+}
+
+@media screen and (max-width: 480px) {
+    .profileImage {
+        right: -20vw;
+    }
 }
