@@ -89,7 +89,7 @@
 }
 
 /* Customized Tailwind-classes for text colors */
-@utility background {
+/* @utility background {
   color: var(--background);
 }
 
@@ -107,7 +107,7 @@
 
 @utility light {
   color: var(--light);
-}
+} */
 
 @layer base {
   * {
