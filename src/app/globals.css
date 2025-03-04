@@ -4,20 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: var(--font-alice);
-  font-style: var(--font-style-normal);
-  line-height: 2;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -30,19 +16,6 @@ body {
   --accent-clr-primary: #f0baad;
   --accent-clr-secondary: #8c977c;
   --light: #f2f2f2;
-  --font-primary: "Alice", serif;
-  --font-secondary: "Antic Didone", serif;
-  --font-handwritten: "Mr De Haviland", cursive;
-}
-
-.font-primary {
-  font-family: var(--font-primary);
-}
-.font-secondary {
-  font-family: var(--font-secondary);
-}
-.font-handwritten {
-  font-family: var(--font-handwritten);
 }
 
 .dark {
@@ -76,6 +49,64 @@ body {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --font-primary: var(--font-alice);
+  --font-secondary: var(--font-antic-didone);
+  --font-handwritten: var(--font-mr-de-haviland);
+}
+
+/* Customized Tailwind-classes for font family */
+@utility font-primary {
+  font-family: var(--font-alice);
+}
+
+@utility font-secondary {
+  font-family: var(--font-antic-didone);
+}
+
+@utility font-handwritten {
+  font-family: var(--font-mr-de-haviland);
+}
+
+/* Customized Tailwind-classes for bg-colors */
+@utility bg-background {
+  background-color: var(--background);
+}
+
+@utility bg-foreground {
+  background-color: var(--foreground);
+}
+
+@utility bg-accent-clr-primary {
+  background-color: var(--accent-clr-primary);
+}
+
+@utility bg-accent-clr-secondary {
+  background-color: var(--accent-clr-secondary);
+}
+
+@utility bg-light {
+  background-color: var(--light);
+}
+
+/* Customized Tailwind-classes for text colors */
+@utility background {
+  color: var(--background);
+}
+
+@utility foreground {
+  color: var(--foreground);
+}
+
+@utility accent-clr-primary {
+  color: var(--accent-clr-primary);
+}
+
+@utility accent-clr-secondary {
+  color: var(--accent-clr-secondary);
+}
+
+@utility light {
+  color: var(--light);
 }
 
 @layer base {
