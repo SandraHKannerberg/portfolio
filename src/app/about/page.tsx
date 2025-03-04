@@ -2,10 +2,12 @@ import React from "react";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 
 export default function AboutPage() {
   return (
     <>
+      <NavBar></NavBar>
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <section className="flex flex-col justify-center md:col-span-2">
@@ -81,6 +83,7 @@ export default function AboutPage() {
           </aside>
         </main>
       </MaxWidthWrapper>
+      <Footer></Footer>
     </>
   );
 }

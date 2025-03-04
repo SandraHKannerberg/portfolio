@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${alice.variable} ${anticDidone.variable} ${mrDeHaviland.variable} antialiased`}
+        className={`${alice.variable} ${anticDidone.variable} ${mrDeHaviland.variable} antialiased leading-7 font-primary non-italic`}
       >
         {children}
       </body>
