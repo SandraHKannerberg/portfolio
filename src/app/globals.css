@@ -30,6 +30,19 @@ body {
   --accent-clr-primary: #f0baad;
   --accent-clr-secondary: #8c977c;
   --light: #f2f2f2;
+  --font-primary: "Alice", serif;
+  --font-secondary: "Antic Didone", serif;
+  --font-handwritten: "Mr De Haviland", cursive;
+}
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+.font-handwritten {
+  font-family: var(--font-handwritten);
 }
 
 .dark {
