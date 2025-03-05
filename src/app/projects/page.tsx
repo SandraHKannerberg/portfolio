@@ -26,7 +26,7 @@ export default async function ProjectPage() {
           </section>
           <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
             <Image
-              src="/projects.svg"
+              src="/images/projects.svg"
               alt="Illustration of a woman and about me text"
               width={400}
               height={400}

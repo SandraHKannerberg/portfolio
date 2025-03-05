@@ -33,7 +33,19 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="m-auto"
         />
       </CardContent>
-      <CardFooter></CardFooter>
+      <CardFooter>
+        {Object.entries(project.links).map(([key, url]) =>
+          url ? (
+            <a
+              key={key}
+              href={url}
+              className="col-span-1 flex justify-center items-center text-lg cursor-pointer hover:bg-secondary hover:text-background w-16 h-16"
+            >
+              {key === "github" ? "Github" : key === "demo" ? "Demo" : null}
+            </a>
+          ) : null
+        )}
+      </CardFooter>
     </Card>
   );
 }

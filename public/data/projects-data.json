@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Fullstack e-commerce",
     "description": "Fullstack E-commerce, including admin dashboard with CRUD operations",
-    "img": "/project-images/ecommerce.png",
+    "img": "/images/project-images/ecommerce.png",
     "tech": "MERN-stack",
     "links": {
       "github": "https://github.com/SandraHKannerberg/degree-project",

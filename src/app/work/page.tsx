@@ -27,7 +27,7 @@ export default function WorkPage() {
           </section>
           <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
             <Image
-              src="/work.svg"
+              src="/images/work.svg"
               alt="Illustration of a businesswoman"
               width={400}
               height={400}

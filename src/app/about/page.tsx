@@ -38,7 +38,7 @@ export default function AboutPage() {
           </section>
           <figure className="w-[400px] h-[400px] animate-fade-in justify-self-center grid items-center">
             <Image
-              src="/about-me.svg"
+              src="/images/about-me.svg"
               alt="Illustration of a woman and about me text"
               width={400}
               height={400}
@@ -47,7 +47,7 @@ export default function AboutPage() {
           </figure>
           <figure className="w-[400px] h-[400px] animate-fade-in justify-self-center grid items-center md:order-1 order-2">
             <Image
-              src="/my-words.svg"
+              src="/images/my-words.svg"
               alt="Illustration of a talking woman"
               width={400}
               height={400}
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </figure>
           <article className="relative animate-slide-up grid items-center md:order-2 order-1">
             <Image
-              src="/double-quotes.svg"
+              src="/images/double-quotes.svg"
               alt="Double-quotes icon"
               width={300}
               height={300}
