@@ -2,61 +2,12 @@
   {
     "id": 1,
     "title": "Fullstack e-commerce",
-    "description": "Lorem ipsum",
+    "description": "Fullstack E-commerce, including admin dashboard with CRUD operations",
+    "img": "/project-images/ecommerce.png",
     "tech": "MERN-stack",
     "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 2,
-    "title": "Lorem ipsum",
-    "description": "",
-    "tech": "",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 3,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 4,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 5,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 6,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
+      "github": "https://github.com/SandraHKannerberg/degree-project",
+      "demo": "https://lotusharmony.sandrahkannerberg.se/"
     }
   }
 ]
