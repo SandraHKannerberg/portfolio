@@ -1,11 +1,40 @@
 "use client";
-import FullscreenMenu from "@/components/ui/fullscreen-menu";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Home() {
+import FullscreenMenu from "@/components/ui/fullscreen-menu";
+import Image from "next/image";
+import { ArrowDown } from "lucide-react";
+
+export default function HomePage() {
+  // Smooth scrolling to AboutPage
+  const router = useRouter();
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    router.prefetch("/about"); // Preload AboutPage
+  }, [router]);
+
+  const handleScroll = () => {
+    if (!scrolling) {
+      setScrolling(true);
+      setTimeout(() => {
+        router.push("/about");
+      }, 500);
+    }
+  };
+
   return (
-    <>
+    <motion.div
+      className="relative w-full h-screen"
+      animate={
+        scrolling ? { scale: 0.5, opacity: 0 } : { scale: 1, opacity: 1 }
+      }
+      transition={{ duration: 0.7 }}
+      onWheel={handleScroll}
+    >
       {/* Hero section */}
       <header className="flex flex-col items-center justify-center relative h-[100vh]">
         <div className="z-1 absolute top-0 right-0 p-5">
@@ -40,7 +69,10 @@ export default function Home() {
             </span>
           </h1>
         </section>
+        <div className="absolute bottom-5 h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
+          <ArrowDown />
+        </div>
       </header>
-    </>
+    </motion.div>
   );
 }
