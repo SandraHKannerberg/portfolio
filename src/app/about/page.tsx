@@ -11,14 +11,12 @@ export default function AboutPage() {
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <section className="flex flex-col justify-center md:col-span-2">
-            <span className="block font-handwritten text-6xl lowercase animate-slide-in-left">
+            <span className="block font-handwritten text-6xl lowercase">
               a little
             </span>
-            <h1 className="text-8xl mb-5 font-secondary uppercase animate-slide-in-right">
-              About me
-            </h1>
+            <h1 className="text-8xl mb-5 font-secondary uppercase">About me</h1>
           </section>
-          <section className="animate-slide-up grid items-center">
+          <section className="grid items-center">
             <p className="mb-5">
               My name is Sandra Höst Kannerberg and I'm a fullstack skilled
               developer with a truly strong passion for frontend development.
@@ -36,7 +34,7 @@ export default function AboutPage() {
               and engaging interfaces.
             </p>
           </section>
-          <figure className="w-[400px] h-[400px] animate-fade-in justify-self-center grid items-center">
+          <figure className="justify-self-center grid items-center">
             <Image
               src="/images/about-me.svg"
               alt="Illustration of a woman and about me text"
@@ -45,7 +43,7 @@ export default function AboutPage() {
               className="justify-self-center"
             />
           </figure>
-          <figure className="w-[400px] h-[400px] animate-fade-in justify-self-center grid items-center md:order-1 order-2">
+          <figure className="justify-self-center grid items-center md:order-1 order-2">
             <Image
               src="/images/my-words.svg"
               alt="Illustration of a talking woman"
@@ -53,7 +51,7 @@ export default function AboutPage() {
               height={400}
             />
           </figure>
-          <article className="relative animate-slide-up grid items-center md:order-2 order-1">
+          <article className="relative grid items-center md:order-2 order-1">
             <Image
               src="/images/double-quotes.svg"
               alt="Double-quotes icon"

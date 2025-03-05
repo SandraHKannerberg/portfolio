@@ -36,13 +36,13 @@ export default function HomePage() {
       onWheel={handleScroll}
     >
       {/* Hero section */}
-      <header className="flex flex-col items-center justify-center relative h-[100vh]">
+      <header className="flex flex-col items-center justify-center relative w-screen h-screen">
         <div className="z-1 absolute top-0 right-0 p-5">
           <FullscreenMenu></FullscreenMenu>
         </div>
 
         <Image
-          src="/background.jpg"
+          src="/images/background.jpg"
           alt="Background image showing crumpled paper"
           fill
           className="bg-cover bg-center"
@@ -69,9 +69,13 @@ export default function HomePage() {
             </span>
           </h1>
         </section>
-        <div className="absolute bottom-5 h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
-          <ArrowDown />
-        </div>
+
+        <section className="absolute bottom-5 flex flex-col justify-center items-center">
+          <small>Scroll down</small>
+          <div className="h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
+            <ArrowDown />
+          </div>
+        </section>
       </header>
     </motion.div>
   );

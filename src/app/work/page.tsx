@@ -15,10 +15,10 @@ export default function WorkPage() {
       <MaxWidthWrapper>
         <main className="grid grid-cols-12">
           <section className="col-span-12 md:col-span-6">
-            <span className="block font-handwritten text-6xl lowercase animate-slide-in-left">
+            <span className="block font-handwritten text-6xl lowercase">
               work
             </span>
-            <h1 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase animate-slide-in-right">
+            <h1 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
               Experience
             </h1>
 
