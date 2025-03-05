@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Skills() {
   return (
     <>
-      <section className="grid col-span-12 gap-2 gap-y-8 place-items-center py-5 grid-cols-3 md:grid-cols-5 lg:grid-cols-9 opacity-50 grayscale hover:opacity-100 hover:grayscale-0">
+      <section className="grid col-span-12 gap-2 gap-y-8 place-items-center py-5 grid-cols-3 md:grid-cols-5 lg:grid-cols-9 opacity-75 grayscale hover:opacity-100 hover:grayscale-0">
         <figure className="flex flex-col items-center m-4 sm:my-0 w-[3rem] md:w-[4rem]">
           <Image
             src="/skills/html.svg"

@@ -53,7 +53,7 @@ export default function AboutPage() {
               height={400}
             />
           </figure>
-          <aside className="relative animate-slide-up grid items-center md:order-2 order-1">
+          <article className="relative animate-slide-up grid items-center md:order-2 order-1">
             <Image
               src="/double-quotes.svg"
               alt="Double-quotes icon"
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 engaging."
               </em>
             </div>
-          </aside>
+          </article>
         </main>
       </MaxWidthWrapper>
       <Footer></Footer>

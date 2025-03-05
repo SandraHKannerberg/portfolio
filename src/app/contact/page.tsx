@@ -1,8 +1,9 @@
 import React from "react";
+
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import ContactIcons from "@/components/ui/contact-icons";
+import ContactIcons from "@/components/contact/contact-icons";
 
 export default function ContactPage() {
   return (

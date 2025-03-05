@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
-import ProjectsList from "@/components/ui/projects-list";
+import ProjectsList from "@/components/projects/projects-list";
 import { Project } from "@/lib/interfaces";
-import { fetchProjects } from "@/lib/actions";
 import Footer from "@/components/ui/footer";
 
+import data from "../../../public/data/projects-data.json";
+
 export default async function ProjectPage() {
-  // Fetch project data server-side
-  const projects: Project[] = await fetchProjects();
+  const projectsData = data as Project[];
 
   return (
     <>
@@ -33,7 +33,7 @@ export default async function ProjectPage() {
             />
           </figure>
 
-          <ProjectsList projects={projects} />
+          <ProjectsList projects={projectsData} />
         </main>
       </MaxWidthWrapper>
       <Footer />
