@@ -4,7 +4,7 @@ import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ContactIcons from "@/components/ui/contact-icons";
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <>
       <NavBar />
