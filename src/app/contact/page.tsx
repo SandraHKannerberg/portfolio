@@ -1,8 +1,9 @@
 import React from "react";
+
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import ContactIcons from "@/components/ui/contact-icons";
+import ContactIcons from "@/components/contact/contact-icons";
 
 export default function ContactPage() {
   return (
@@ -11,10 +12,10 @@ export default function ContactPage() {
       <MaxWidthWrapper>
         <main className="h-[85vh] my-auto grid md:grid-cols-2">
           <section className="flex flex-col justify-center">
-            <span className="block font-handwritten text-6xl lowercase animate-slide-in-left">
+            <span className="block font-handwritten text-6xl lowercase">
               let's
             </span>
-            <h1 className="text-7xl lg:text-9xl mb-5 font-secondary uppercase animate-slide-in-right">
+            <h1 className="text-7xl lg:text-9xl mb-5 font-secondary uppercase">
               Get in touch
             </h1>
           </section>

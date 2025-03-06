@@ -2,61 +2,33 @@
   {
     "id": 1,
     "title": "Fullstack e-commerce",
-    "description": "Lorem ipsum",
-    "tech": "MERN-stack",
+    "description": "Create a fullstack e-commerce using the MERN stack, featuring an admin dashboard with CRUD operations for managing products, users, and orders.",
+    "img": "/images/project-images/ecommerce.png",
+    "tech": "MERN-stack (MongoDB, Express, React, Node.js) along with TypeScript, Bootstrap and Stripe integration.",
     "links": {
-      "github": "",
-      "demo": ""
+      "github": "https://github.com/SandraHKannerberg/degree-project",
+      "demo": "https://lotusharmony.sandrahkannerberg.se/"
     }
   },
   {
     "id": 2,
-    "title": "Lorem ipsum",
-    "description": "",
-    "tech": "",
+    "title": "Weather App",
+    "description": "Create a weather app that retrieves real-time data from the Open Weather API, allowing users to check weather conditions and forecasts.",
+    "img": "/images/project-images/weather.png",
+    "tech": "React, TypeScript, Bootstrap, Open Weather API",
     "links": {
-      "github": "",
-      "demo": ""
+      "github": "https://github.com/SandraHKannerberg/weather-app",
+      "demo": "https://sandra-weather-app.onrender.com/"
     }
   },
   {
     "id": 3,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
+    "title": "Semantic HTML and accessibility",
+    "description": "Showcase my ability to implement advanced CSS, semantic HTML, and follow accessibility best practices based on a given mock-up.",
+    "img": "/images/project-images/planthood.png",
+    "tech": "HTML and CSS",
     "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 4,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 5,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
-    }
-  },
-  {
-    "id": 6,
-    "title": "Lorem ipsum",
-    "description": "Lorem ipsum",
-    "tech": "React",
-    "links": {
-      "github": "",
-      "demo": ""
+      "github": "https://github.com/SandraHKannerberg/planned-planthood"
     }
   }
 ]

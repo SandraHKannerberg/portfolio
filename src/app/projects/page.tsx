@@ -2,14 +2,15 @@ import React from "react";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
-import ProjectsList from "@/components/ui/projects-list";
+import { Button } from "@/components/ui/button";
+import ProjectsList from "@/components/projects/projects-list";
 import { Project } from "@/lib/interfaces";
-import { fetchProjects } from "@/lib/actions";
 import Footer from "@/components/ui/footer";
 
+import data from "../../../public/data/projects-data.json";
+
 export default async function ProjectPage() {
-  // Fetch project data server-side
-  const projects: Project[] = await fetchProjects();
+  const projectsData = data as Project[];
 
   return (
     <>
@@ -17,23 +18,28 @@ export default async function ProjectPage() {
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 md:grid-cols-12">
           <section className="col-span-12 md:col-span-6">
-            <span className="block font-handwritten text-6xl lowercase animate-slide-in-left">
+            <span className="block font-handwritten text-6xl lowercase">
               showcase my
             </span>
-            <h1 className="text-6xl lg:text-8xl  mb-5 font-secondary uppercase animate-slide-in-right">
+            <h1 className="text-6xl lg:text-8xl  mb-5 font-secondary uppercase">
               Projects
             </h1>
+            <a href="https://github.com/SandraHKannerberg/portfolio">
+              <Button className="rounded shadow uppercase cursor-pointer hover:bg-secondary hover:text-background">
+                GitHub-repo for this Portfolio
+              </Button>
+            </a>
           </section>
           <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
             <Image
-              src="/projects.svg"
+              src="/images/projects.svg"
               alt="Illustration of a woman and about me text"
               width={400}
               height={400}
             />
           </figure>
 
-          <ProjectsList projects={projects} />
+          <ProjectsList projects={projectsData} />
         </main>
       </MaxWidthWrapper>
       <Footer />

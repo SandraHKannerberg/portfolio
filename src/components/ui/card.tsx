@@ -2,9 +2,9 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
+function Card({ className, ...props }: React.ComponentProps<"article">) {
   return (
-    <div
+    <article
       data-slot="card"
       className={cn(
         "bg-muted text-foreground flex flex-col gap-6 rounded py-6 shadow-lg",
@@ -15,9 +15,9 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+function CardHeader({ className, ...props }: React.ComponentProps<"header">) {
   return (
-    <div
+    <header
       data-slot="card-header"
       className={cn("flex flex-col gap-1.5 px-6", className)}
       {...props}
@@ -45,9 +45,9 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+function CardContent({ className, ...props }: React.ComponentProps<"section">) {
   return (
-    <div
+    <section
       data-slot="card-content"
       className={cn("px-6", className)}
       {...props}
@@ -55,11 +55,11 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+function CardFooter({ className, ...props }: React.ComponentProps<"footer">) {
   return (
-    <div
+    <footer
       data-slot="card-footer"
-      className={cn("flex items-center px-6", className)}
+      className={cn("flex items-center justify-between px-6", className)}
       {...props}
     />
   );

@@ -3,7 +3,7 @@ import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 
 export default function TimeLine() {
   return (
-    <ul className="grid col-span-12 mt-[5rem] space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-secondary before:to-transparent">
+    <ul className="grid col-span-12 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-secondary before:to-transparent">
       {/* Timeline item */}
       <li className="relative col-span-12 flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
         {/* Icon */}
@@ -28,7 +28,7 @@ export default function TimeLine() {
         </div>
 
         {/* Card */}
-        <article className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-light p-4 rounded shadow">
+        <article className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-muted p-4 rounded shadow">
           <h3 className="font-bold">
             Fullstack developer at Propida Solutions AB
           </h3>

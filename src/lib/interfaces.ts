@@ -9,5 +9,11 @@ export interface Project {
   img: string;
   description: string;
   tech: string;
-  links: Links[];
+  links: Links;
+}
+
+export interface Skill {
+  src: string;
+  alt: string;
+  name: string;
 }
