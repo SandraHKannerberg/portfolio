@@ -24,10 +24,11 @@ export const metadata: Metadata = {
   title: "Sandra Höst Kannerberg | Portfolio",
   description:
     "Explore the portfolio of Sandra Höst Kannerberg. I'm a fullstack skilled web developer specializing in frontend solutions. Get to know me, discover my projects, work experience, and expertise in creating user-friendly and accessible web applications. Feel free to reach out if you're interested in collaborating or if you have any questions!",
+  // TODO: add my url after deploy
+  // metadataBase: new URL("my website url"),
   keywords:
     "Sandra Höst Kannerberg, web developer, portfolio, frontend, backend, fullstack, web development, accessible web design, coding projects, software development, web development portfolio, frontend development portfolio, fullstack development portfolio",
   creator: "Sandra Höst Kannerberg",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     title: "Sandra Höst Kannerberg | Portfolio",
     description:
