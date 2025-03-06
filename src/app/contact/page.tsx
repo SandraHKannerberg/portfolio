@@ -1,9 +1,16 @@
 import React from "react";
+import { Metadata } from "next";
 
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import ContactIcons from "@/components/contact/contact-icons";
+
+export const metadata: Metadata = {
+  title: "Portfolio - Contact",
+  description:
+    "Get in touch with Sandra Höst Kannerberg. Reach out for inquiries, feedback, or collaboration opportunities. I'm here to help and connect!",
+};
 
 export default function ContactPage() {
   return (
