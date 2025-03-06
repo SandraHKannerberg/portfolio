@@ -11,3 +11,9 @@ export interface Project {
   tech: string;
   links: Links;
 }
+
+export interface Skill {
+  src: string;
+  alt: string;
+  name: string;
+}

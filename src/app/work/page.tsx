@@ -37,7 +37,9 @@ export default function WorkPage() {
    
           {/* Timeline */}
           <section className="col-span-12 my-16">
-            <h2 className="pb-5 text-lg uppercase">Experience timeline</h2>
+            <h2 className="pb-5 text-lg uppercase sr-only">
+              Experience timeline
+            </h2>
             <TimeLine />
           </section>
 

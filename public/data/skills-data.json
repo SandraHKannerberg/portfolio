@@ -1,0 +1,79 @@
+[
+  { "src": "/skills/html.svg", "alt": "HTML logotype", "name": "HTML" },
+  { "src": "/skills/css.svg", "alt": "CSS logotype", "name": "CSS" },
+  {
+    "src": "/skills/javascript.svg",
+    "alt": "JavaScript logotype",
+    "name": "JavaScript"
+  },
+  {
+    "src": "/skills/typescript.svg",
+    "alt": "TypeScript logotype",
+    "name": "TypeScript"
+  },
+  {
+    "src": "/skills/react.svg",
+    "alt": "React logotype",
+    "name": "React"
+  },
+  {
+    "src": "/skills/next-js.svg",
+    "alt": "NextJs logotype",
+    "name": "NextJs"
+  },
+  {
+    "src": "/skills/tailwind.svg",
+    "alt": "Tailwind logotype",
+    "name": "Tailwind"
+  },
+  {
+    "src": "/skills/bootstrap.svg",
+    "alt": "Bootstrap logotype",
+    "name": "Bootstrap"
+  },
+  {
+    "src": "/skills/antdesign.svg",
+    "alt": "AntDesign logotype",
+    "name": "AntDesign"
+  },
+  {
+    "src": "/skills/materialui.svg",
+    "alt": "MaterialUI logotype",
+    "name": "MaterialUI"
+  },
+  {
+    "src": "/skills/node-js.svg",
+    "alt": "NodeJs logotype",
+    "name": "NodeJs"
+  },
+  {
+    "src": "/skills/mongodb.svg",
+    "alt": "MongoDB logotype",
+    "name": "MongoDB"
+  },
+  {
+    "src": "/skills/mysql.svg",
+    "alt": "MySQL logotype",
+    "name": "MySQL"
+  },
+  {
+    "src": "/skills/postgresql.svg",
+    "alt": "PostgreSQL logotype",
+    "name": "PostgreSQL"
+  },
+  {
+    "src": "/skills/git.svg",
+    "alt": "Git logotype",
+    "name": "Git"
+  },
+  {
+    "src": "/skills/github.svg",
+    "alt": "GitHub logotype",
+    "name": "GitHub"
+  },
+  {
+    "src": "/skills/graphql.svg",
+    "alt": "GraphQL logotype",
+    "name": "GraphQL"
+  }
+]
