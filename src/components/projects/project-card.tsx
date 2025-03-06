@@ -39,6 +39,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <a
               key={key}
               href={url}
+              target="_blank"
               className="col-span-1 flex justify-center items-center text-lg cursor-pointer hover:underline w-16 h-16"
             >
               {key === "github" ? "Github" : key === "demo" ? "Demo" : null}

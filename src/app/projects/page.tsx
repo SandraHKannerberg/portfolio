@@ -28,11 +28,11 @@ export default async function ProjectPage() {
             <span className="block font-handwritten text-6xl lowercase">
               showcase my
             </span>
-            <h1 className="text-6xl lg:text-8xl  mb-5 font-secondary uppercase">
+            <h1 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
               Projects
             </h1>
             <a href="https://github.com/SandraHKannerberg/portfolio">
-              <Button className="rounded shadow uppercase cursor-pointer hover:bg-secondary hover:text-background">
+              <Button className="rounded shadow uppercase mt-5 mb-10 cursor-pointer hover:bg-secondary hover:text-background animate-bounce">
                 GitHub-repo for this Portfolio
               </Button>
             </a>
