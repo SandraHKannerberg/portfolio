@@ -5,7 +5,7 @@ import OneByOneAnimation from "../animations/one-by-one";
 import data from "../../../public/data/skills-data.json";
 import { Skill } from "@/lib/interfaces";
 
-export default function Skills({ skills }: { skills: Skill[] }) {
+export default function Skills() {
   const skillsData = data as Skill[];
 
   return (

@@ -1,9 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
+
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import Highlights from "@/components/work/highlights";
+
+export const metadata: Metadata = {
+  title: "Portfolio - About",
+  description:
+    "Learn more about Sandra Höst Kannerberg, a passionate web developer with a focus on creativity, user-friendly solutions, and continuous growth. Discover my journey and expertise!",
+};
 
 export default function AboutPage() {
   return (

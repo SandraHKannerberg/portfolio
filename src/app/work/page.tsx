@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
@@ -7,6 +8,12 @@ import CvBtn from "@/components/work/cv-btn";
 import TimeLine from "@/components/work/time-line";
 import Skills from "@/components/work/skills";
 import Footer from "@/components/ui/footer";
+
+export const metadata: Metadata = {
+  title: "Portfolio - Work",
+  description:
+    "Discover Sandra Höst Kannerberg's professional journey, including her work experience and educational background. Learn about the skills and expertise gained throughout her career.",
+};
 
 export default function WorkPage() {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,12 @@ import { Project } from "@/lib/interfaces";
 import Footer from "@/components/ui/footer";
 
 import data from "../../../public/data/projects-data.json";
+
+export const metadata: Metadata = {
+  title: "Portfolio - Projects",
+  description:
+    "Explore a curated selection of projects created by Sandra Höst Kannerberg, see how I bring ideas to life through design and development.",
+};
 
 export default async function ProjectPage() {
   const projectsData = data as Project[];
