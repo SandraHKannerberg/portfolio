@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
+import { Button } from "@/components/ui/button";
 import ProjectsList from "@/components/projects/projects-list";
 import { Project } from "@/lib/interfaces";
 import Footer from "@/components/ui/footer";
@@ -23,6 +24,11 @@ export default async function ProjectPage() {
             <h1 className="text-6xl lg:text-8xl  mb-5 font-secondary uppercase">
               Projects
             </h1>
+            <a href="https://github.com/SandraHKannerberg/portfolio">
+              <Button className="rounded shadow uppercase cursor-pointer hover:bg-secondary hover:text-background">
+                GitHub-repo for this Portfolio
+              </Button>
+            </a>
           </section>
           <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
             <Image

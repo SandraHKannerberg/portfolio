@@ -2,12 +2,33 @@
   {
     "id": 1,
     "title": "Fullstack e-commerce",
-    "description": "Fullstack E-commerce, including admin dashboard with CRUD operations",
+    "description": "Create a fullstack e-commerce using the MERN stack, featuring an admin dashboard with CRUD operations for managing products, users, and orders.",
     "img": "/images/project-images/ecommerce.png",
-    "tech": "MERN-stack",
+    "tech": "MERN-stack (MongoDB, Express, React, Node.js) along with TypeScript, Bootstrap and Stripe integration.",
     "links": {
       "github": "https://github.com/SandraHKannerberg/degree-project",
       "demo": "https://lotusharmony.sandrahkannerberg.se/"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Weather App",
+    "description": "Create a weather app that retrieves real-time data from the Open Weather API, allowing users to check weather conditions and forecasts.",
+    "img": "/images/project-images/weather.png",
+    "tech": "React, TypeScript, Bootstrap, Open Weather API",
+    "links": {
+      "github": "https://github.com/SandraHKannerberg/weather-app",
+      "demo": "https://sandra-weather-app.onrender.com/"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Semantic HTML and accessibility",
+    "description": "Showcase my ability to implement advanced CSS, semantic HTML, and follow accessibility best practices based on a given mock-up.",
+    "img": "/images/project-images/planthood.png",
+    "tech": "HTML and CSS",
+    "links": {
+      "github": "https://github.com/SandraHKannerberg/planned-planthood"
     }
   }
 ]
