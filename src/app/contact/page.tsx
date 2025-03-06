@@ -20,7 +20,7 @@ export default function ContactPage() {
         <main className="h-[85vh] my-auto grid md:grid-cols-2">
           <section className="flex flex-col justify-center">
             <span className="block font-handwritten text-6xl lowercase">
-              let's
+              let&apos;s
             </span>
             <h1 className="text-7xl lg:text-9xl mb-5 font-secondary uppercase">
               Get in touch

@@ -30,18 +30,18 @@ export default function AboutPage() {
           </section>
           <section className="grid items-center">
             <p className="mb-5">
-              My name is Sandra Höst Kannerberg and I'm a fullstack skilled
+              My name is Sandra Höst Kannerberg and I am a fullstack skilled
               developer with a truly strong passion for frontend development.
             </p>
             <p className="mb-5">
-              I'm passionate about turning ideas into interactive experiences.
+              I am passionate about turning ideas into interactive experiences.
               With 3 years of experience in web development and 15+ years in
               customer relations within the banking sector, I bring a unique
               user perspective, creativity, and technical expertise to every
               project.
             </p>
             <p className="mb-5">
-              I'm committed to user-friendliness, accessibility, and crafting
+              I am committed to user-friendliness, accessibility, and crafting
               high-quality solutions that transform complex ideas into intuitive
               and engaging interfaces.
             </p>
@@ -74,10 +74,10 @@ export default function AboutPage() {
 
             <div className="flex flex-col gap-5 z-50">
               <em className="z-50">
-                "I love the magic of turning ideas into interactive experiences.
-                There's something truly exciting about crafting seamless
-                interfaces where colors, shapes, and animations work together to
-                create both beauty and function.
+                &quot;I love the magic of turning ideas into interactive
+                experiences. There is something truly exciting about crafting
+                seamless interfaces where colors, shapes, and animations work
+                together to create both beauty and function.
               </em>
               <em className="z-50">
                 I find my flow in the creative process, where attention to
@@ -85,9 +85,9 @@ export default function AboutPage() {
                 my side and music in the background.
               </em>
               <em className="z-50">
-                For me, frontend development is more than just code; it's about
+                For me, frontend development is more than just code; it is about
                 bringing design to life in a way that feels intuitive and
-                engaging."
+                engaging.&quot;
               </em>
             </div>
           </article>
