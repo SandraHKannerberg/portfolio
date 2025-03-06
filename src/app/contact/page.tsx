@@ -38,8 +38,10 @@ export default function ContactPage() {
                 sandra.hkannerberg@gmail.com
               </a>
             </div>
-
-            <ContactIcons></ContactIcons>
+            <ContactIcons
+              icons={["github", "linkedin"]}
+              className="text-5xl text-primary"
+            />
           </section>
         </main>
       </MaxWidthWrapper>
