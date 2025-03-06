@@ -6,11 +6,21 @@ export default function NavBar() {
     <header className="p-3 sticky top-0 bg-background/75 z-[100] backdrop-blur-lg transition-all shadow-sm mb-5">
       {/* Desktop Menu */}
       <nav className="hidden md:flex justify-center gap-10 uppercase p-3">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/" className="hover:underline ">
+          Home
+        </Link>
+        <Link href="/about" className="hover:underline">
+          About
+        </Link>
+        <Link href="/work" className="hover:underline">
+          Work
+        </Link>
+        <Link href="/projects" className="hover:underline">
+          Projects
+        </Link>
+        <Link href="/contact" className="hover:underline">
+          Contact
+        </Link>
       </nav>
 
       {/* Mobile Menu */}
