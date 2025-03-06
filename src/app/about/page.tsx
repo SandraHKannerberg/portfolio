@@ -3,6 +3,7 @@ import Image from "next/image";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import NavBar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import Highlights from "@/components/work/highlights";
 
 export default function AboutPage() {
   return (
@@ -10,11 +11,14 @@ export default function AboutPage() {
       <NavBar></NavBar>
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          <section className="flex flex-col justify-center md:col-span-2">
+          <section className="flex flex-col justify-center md:col-span-1">
             <span className="block font-handwritten text-6xl lowercase">
               a little
             </span>
-            <h1 className="text-8xl mb-5 font-secondary uppercase">About me</h1>
+            <h1 className="text-8xl font-secondary uppercase">About me</h1>
+          </section>
+          <section className="flex items-center md:col-span-2 my-10">
+            <Highlights />
           </section>
           <section className="grid items-center">
             <p className="mb-5">
