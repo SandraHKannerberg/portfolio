@@ -17,7 +17,7 @@ export default function WavePulseAnimation({
   delayIndex = 0,
   duration = 2,
 }: WavePulseAnimationProps) {
-  const MotionComponent = motion(Component);
+  const MotionComponent = motion.create(Component);
 
   return (
     <MotionComponent

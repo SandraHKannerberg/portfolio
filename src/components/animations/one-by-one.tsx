@@ -17,7 +17,7 @@ export default function OneByOneAnimation({
   delayIndex = 0,
   duration = 0.5,
 }: OneByOneAnimationProps) {
-  const MotionComponent = motion(Component);
+  const MotionComponent = motion.create(Component);
 
   return (
     <MotionComponent

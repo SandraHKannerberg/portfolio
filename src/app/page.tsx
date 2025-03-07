@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-import FullscreenMenu from "@/components/ui/fullscreen-menu";
+import FullscreenMenu from "@/components/navigation/fullscreen-menu";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 
@@ -89,8 +89,8 @@ export default function HomePage() {
           </h1>
         </section>
 
-        <section className="absolute bottom-5 flex flex-col justify-center items-center">
-          <small>Scroll down</small>
+        <section className="absolute bottom-10 flex flex-col justify-center items-center">
+          <small className="absolute bottom-15">Scroll</small>
           <div className="h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
             <ArrowDown />
           </div>
