@@ -1,31 +1,38 @@
 "use client";
 
-import * as React from "react";
 import { AlignJustify, X } from "lucide-react";
+import Link from "next/link";
+
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import Link from "next/link";
 
 export default function FullscreenMenu() {
   return (
     <Drawer>
-      <DrawerTrigger aria-label="Menu">
+      <DrawerTrigger aria-label="Menu" className="flex justify-self-end">
         <AlignJustify></AlignJustify>
       </DrawerTrigger>
-      <DrawerContent className="top-0 font-secondary flex flex-col justify-between uppercase p-5 text-5xl gap-5">
+      <DrawerContent
+        aria-describedby="dropdown-menu"
+        className="top-0 font-secondary flex flex-col justify-between uppercase p-5 text-5xl gap-5"
+      >
         <DrawerHeader>
-          <DrawerTitle className="text-4xl flex justify-between items-center">
+          <DrawerClose className="flex justify-center">
+            <X></X>
+          </DrawerClose>
+          <DrawerTitle className="text-4xl flex justify-between items-center sr-only">
             Menu
-            <DrawerClose className="flex justify-center">
-              <X></X>
-            </DrawerClose>
           </DrawerTitle>
+          <DrawerDescription className="sr-only">
+            Dropdown menu for small devices
+          </DrawerDescription>
         </DrawerHeader>
 
         <Link
