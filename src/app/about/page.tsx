@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
-import NavBar from "@/components/ui/navbar";
+import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import Footer from "@/components/ui/footer";
-import Highlights from "@/components/work/highlights";
+import KeyFeatures from "@/components/about/key-features";
 
 export const metadata: Metadata = {
   title: "Portfolio - About",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <NavBar></NavBar>
+      <HeaderWithNavBar></HeaderWithNavBar>
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <section className="flex flex-col justify-center md:col-span-1">
@@ -26,7 +26,7 @@ export default function AboutPage() {
             <h1 className="text-8xl font-secondary uppercase">About me</h1>
           </section>
           <section className="flex items-center md:col-span-2 my-10">
-            <Highlights />
+            <KeyFeatures />
           </section>
           <section className="grid items-center">
             <p className="mb-5">
