@@ -28,28 +28,39 @@ export default function FullscreenMenu() {
           </DrawerTitle>
         </DrawerHeader>
 
-        <Link href="/" className="focus:bg-secondary focus:text-background">
+        <Link
+          href="/"
+          className="focus:bg-secondary focus:text-background"
+          scroll={false}
+        >
           Home
         </Link>
 
         <Link
           href="/about"
           className="focus:bg-secondary focus:text-background"
+          scroll={false}
         >
           About
         </Link>
-        <Link href="/work" className="focus:bg-secondary focus:text-background">
+        <Link
+          href="/work"
+          className="focus:bg-secondary focus:text-background"
+          scroll={false}
+        >
           Work
         </Link>
         <Link
           href="/projects"
           className="focus:bg-secondary focus:text-background"
+          scroll={false}
         >
           Projects
         </Link>
         <Link
           href="/contact"
           className="focus:bg-secondary focus:text-background"
+          scroll={false}
         >
           Contact
         </Link>

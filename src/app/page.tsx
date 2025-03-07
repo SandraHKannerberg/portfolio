@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-import FullscreenMenu from "@/components/ui/fullscreen-menu";
+import FullscreenMenu from "@/components/navigation/fullscreen-menu";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 

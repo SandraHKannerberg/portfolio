@@ -3,22 +3,22 @@ import FullScreenMenu from "./fullscreen-menu";
 
 export default function NavBar() {
   return (
-    <header className="p-3 sticky top-0 bg-background/75 z-[100] backdrop-blur-lg transition-all shadow-sm mb-5">
+    <>
       {/* Desktop Menu */}
       <nav className="hidden md:flex justify-center gap-10 uppercase p-3">
-        <Link href="/" className="hover:underline ">
+        <Link href="/" className="hover:underline" scroll={false}>
           Home
         </Link>
-        <Link href="/about" className="hover:underline">
+        <Link href="/about" className="hover:underline" scroll={false}>
           About
         </Link>
-        <Link href="/work" className="hover:underline">
+        <Link href="/work" className="hover:underline" scroll={false}>
           Work
         </Link>
-        <Link href="/projects" className="hover:underline">
+        <Link href="/projects" className="hover:underline" scroll={false}>
           Projects
         </Link>
-        <Link href="/contact" className="hover:underline">
+        <Link href="/contact" className="hover:underline" scroll={false}>
           Contact
         </Link>
       </nav>
@@ -27,6 +27,6 @@ export default function NavBar() {
       <nav className="md:hidden flex items-center justify-end">
         <FullScreenMenu></FullScreenMenu>
       </nav>
-    </header>
+    </>
   );
 }
