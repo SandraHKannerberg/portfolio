@@ -46,16 +46,17 @@ export default function AboutPage() {
               and engaging interfaces.
             </p>
           </section>
-          <figure className="justify-self-center grid items-center">
+          <figure className="justify-self-center grid items-center w-80 h-80">
             <Image
               src="/images/about-me.svg"
               alt="Illustration of a woman and about me text"
               width={400}
               height={400}
               className="justify-self-center"
+              priority
             />
           </figure>
-          <figure className="justify-self-center grid items-center md:order-1 order-2">
+          <figure className="justify-self-center grid items-center md:order-1 order-2 w-80 h-80">
             <Image
               src="/images/my-words.svg"
               alt="Illustration of a talking woman"
@@ -63,7 +64,7 @@ export default function AboutPage() {
               height={400}
             />
           </figure>
-          <article className="relative grid items-center md:order-2 order-1">
+          <article className="relative grid items-center md:order-2 order-1 my-16">
             <Image
               src="/images/double-quotes.svg"
               alt="Double-quotes icon"
@@ -73,22 +74,22 @@ export default function AboutPage() {
             />
 
             <div className="flex flex-col gap-5 z-50">
-              <em className="z-50">
+              <p className="z-50 italic">
                 &quot;I love the magic of turning ideas into interactive
                 experiences. There is something truly exciting about crafting
                 seamless interfaces where colors, shapes, and animations work
                 together to create both beauty and function.
-              </em>
-              <em className="z-50">
+              </p>
+              <p className="z-50 italic">
                 I find my flow in the creative process, where attention to
                 detail meets problem-solving—often with a good cup of coffee by
                 my side and music in the background.
-              </em>
-              <em className="z-50">
+              </p>
+              <p className="z-50 italic">
                 For me, frontend development is more than just code; it is about
                 bringing design to life in a way that feels intuitive and
                 engaging.&quot;
-              </em>
+              </p>
             </div>
           </article>
         </main>

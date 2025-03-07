@@ -24,25 +24,26 @@ export default async function ProjectPage() {
       <NavBar />
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 md:grid-cols-12">
-          <section className="col-span-12 md:col-span-6">
+          <section className="col-span-12 sm:col-span-6">
             <span className="block font-handwritten text-6xl lowercase">
-              showcase my
+              selected
             </span>
             <h1 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
               Projects
             </h1>
             <a href="https://github.com/SandraHKannerberg/portfolio">
               <Button className="rounded shadow uppercase mt-5 mb-10 cursor-pointer hover:bg-secondary hover:text-background animate-bounce">
-                GitHub-repo for this Portfolio
+                Portfolio source code
               </Button>
             </a>
           </section>
-          <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
+          <figure className="grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-end h-80 w-90 sm:w-100">
             <Image
               src="/images/projects.svg"
               alt="Illustration of a woman and about me text"
-              width={400}
+              width={500}
               height={400}
+              priority
             />
           </figure>
 

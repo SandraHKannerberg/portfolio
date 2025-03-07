@@ -32,7 +32,7 @@ export default function WorkPage() {
             {/* Cta-btn: download cv */}
             <CvBtn></CvBtn>
           </section>
-          <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end">
+          <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center lg:justify-self-end w-80 h-80">
             <Image
               src="/images/work.svg"
               alt="Illustration of a businesswoman"

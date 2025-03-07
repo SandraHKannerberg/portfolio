@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <Card className="h-full">
       <CardHeader className="flex-grow">
         <CardTitle>
-          <h2 className="text-lg">{project.title}</h2>
+          <h2 className="text-lg uppercase">{project.title}</h2>
         </CardTitle>
         <CardDescription className="flex flex-col gap-3 flex-grow">
           <p className="flex-grow">{project.description}</p>

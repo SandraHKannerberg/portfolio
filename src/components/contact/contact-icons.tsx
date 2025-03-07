@@ -28,7 +28,7 @@ export default function ContactIcons({
   icons = ["github", "linkedin", "contact"],
 }: ContactIconsProps) {
   return (
-    <section className="flex justify-center items-center gap-3 w-[fit-content]">
+    <section className="flex justify-center items-center gap-3 w-[fit-content] mx-auto">
       {icons.map((key) => {
         const Icon = ICONS[key].component;
         return (
