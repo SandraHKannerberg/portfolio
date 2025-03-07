@@ -19,13 +19,13 @@ export default function AboutPage() {
       <HeaderWithNavBar></HeaderWithNavBar>
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
-          <section className="flex flex-col justify-center md:col-span-1">
+          <section className="flex flex-col justify-center col-span-2">
             <span className="block font-handwritten text-6xl lowercase">
               a little
             </span>
             <h1 className="text-8xl font-secondary uppercase">About me</h1>
           </section>
-          <section className="flex items-center md:col-span-2 my-10">
+          <section className="flex items-center col-span-2 my-10">
             <KeyFeatures />
           </section>
           <section className="grid items-center">
