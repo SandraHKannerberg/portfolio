@@ -20,7 +20,8 @@ const features = [
 export default function KeyFeatures() {
   const isMobile = useIsMobile();
   return (
-    <ul className="w-full flex flex-col gap-5 sm:gap-0 sm:flex-row sm:justify-between sm:items-center">
+    // <ul className="w-full flex flex-col gap-5 sm:gap-0 sm:flex-row sm:justify-between sm:items-center">
+    <ul className="w-full flex justify-between items-center">
       {features.map((feature, index) => (
         <WavePulseAnimation
           key={index}
@@ -28,13 +29,16 @@ export default function KeyFeatures() {
           className="flex gap-3 sm:gap-0 sm:flex-col sm:justify-center items-center"
         >
           <Popover>
-            <PopoverTrigger className="cursor-pointer transition-transform duration-300 hover:scale-120">
+            <PopoverTrigger
+              aria-label={`Display icon for ${feature.text}`}
+              className="cursor-pointer transition-transform duration-300 hover:scale-120"
+            >
               {feature.icon}
             </PopoverTrigger>
 
             <PopoverContent
-              className="text-center uppercase md:side-bottom"
-              side={isMobile ? "right" : "bottom"}
+              className="text-center uppercase side-bottom"
+              // side={isMobile ? "right" : "bottom"}
             >
               <p>{feature.text}</p>
             </PopoverContent>
