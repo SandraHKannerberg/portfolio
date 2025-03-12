@@ -44,8 +44,8 @@ export default function HomePage() {
           </h1>
         </section>
 
-        <section className="absolute bottom-10 flex flex-col justify-center items-center">
-          <small className="absolute bottom-15">Scroll</small>
+        <section className="absolute bottom-23 flex flex-col justify-center items-center">
+          <small className="absolute bottom-18">Scroll</small>
           <div className="h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
             <ArrowDown />
           </div>
