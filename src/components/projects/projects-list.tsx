@@ -1,14 +1,34 @@
 import { Project } from "@/lib/interfaces";
 import ProjectCard from "./project-card";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 export default function ProjectList({ projects }: { projects: Project[] }) {
   return (
-    <ul className="grid col-span-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-20">
-      {projects.map((project) => (
-        <li key={project.id} className="flex">
-          <ProjectCard project={project} />
-        </li>
-      ))}
-    </ul>
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="col-span-12"
+    >
+      <CarouselContent>
+        {projects.map((project) => (
+          <CarouselItem
+            key={project.id}
+            className="flex-shrink-0 md:basis-1/2 lg:basis-1/3"
+          >
+            <ProjectCard project={project} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
+      <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />
+    </Carousel>
   );
 }
