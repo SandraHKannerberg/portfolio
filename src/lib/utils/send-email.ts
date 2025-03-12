@@ -8,9 +8,6 @@ export async function sendEmail(data: FormData) {
     const response = await fetch(apiEndpoint, {
       method: "POST",
       body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
     });
 
     if (!response.ok) {

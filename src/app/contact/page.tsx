@@ -38,7 +38,6 @@ export default function ContactPage() {
             </a>
           </section>
 
-          {/* TODO: update to a contact form */}
           <section className="flex flex-col gap-3 justify-center items-center bg-foreground text-background shadow-lg rounded py-5 my-10 md:my-0">
             <div className="text-center">
               <h2 className="text-lg uppercase">Let&apos;s work together!</h2>
