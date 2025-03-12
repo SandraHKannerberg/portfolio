@@ -2,9 +2,9 @@
   {
     "id": 1,
     "title": "Fullstack e-commerce",
-    "description": "Create a fullstack e-commerce using the MERN stack, featuring an admin dashboard with CRUD operations for managing products, users, and orders.",
+    "description": "A complete e-commerce platform built with the MERN stack, showcasing my ability to develop both frontend and backend solutions, including database management, user authentication, payment integration and CRUD-operations.",
     "img": "/images/project-images/ecommerce.png",
-    "tech": "MERN-stack (MongoDB, Express, React, Node.js) along with TypeScript, Bootstrap and Stripe integration.",
+    "tech": "MERN-stack (MongoDB, Express, React, Node.js), TypeScript, Bootstrap and Stripe integration.",
     "links": {
       "github": "https://github.com/SandraHKannerberg/degree-project",
       "demo": "https://lotusharmony.sandrahkannerberg.se/"
@@ -13,9 +13,9 @@
   {
     "id": 2,
     "title": "Weather App",
-    "description": "Create a weather app that retrieves real-time data from the Open Weather API, allowing users to check weather conditions and forecasts.",
+    "description": "This project highlights my ability to build dynamic web applications using React, TypeScript, and Bootstrap, while integrating data from a weather API to display real-time weather information.",
     "img": "/images/project-images/weather.png",
-    "tech": "React, TypeScript, Bootstrap, Open Weather API",
+    "tech": "React, TypeScript, Bootstrap",
     "links": {
       "github": "https://github.com/SandraHKannerberg/weather-app",
       "demo": "https://sandra-weather-app.onrender.com/"
@@ -23,12 +23,32 @@
   },
   {
     "id": 3,
-    "title": "Semantic HTML and accessibility",
+    "title": "Design Implementation",
     "description": "Showcase my ability to implement advanced CSS, semantic HTML, and follow accessibility best practices based on a given mock-up.",
     "img": "/images/project-images/planthood.png",
     "tech": "HTML and CSS",
     "links": {
       "github": "https://github.com/SandraHKannerberg/planned-planthood"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Bucket list",
+    "description": "A responsive bucket list app using HTML, CSS, JavaScript, and localStorage, demonstrating my ability to create dynamic functionality and manage persistent data.",
+    "img": "/images/project-images/bucketlist.png",
+    "tech": "HTML, CSS and JavaScript",
+    "links": {
+      "github": "https://github.com/SandraHKannerberg/bucketlist"
+    }
+  },
+  {
+    "id": 5,
+    "title": "CRUD-app",
+    "description": "A CRUD app for managing an artist collection, built with HTML, CSS, and JavaScript, fetching data from an external API to demonstrate my skills in handling dynamic data and interactive functionality.",
+    "img": "/images/project-images/crud.png",
+    "tech": "HTML, CSS, JavaScript and API integration",
+    "links": {
+      "github": "https://github.com/SandraHKannerberg/crud-app"
     }
   }
 ]
