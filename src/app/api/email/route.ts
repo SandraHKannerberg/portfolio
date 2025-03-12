@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     new Promise<string>((resolve, reject) => {
       transport.sendMail(mailOptions, function (err) {
         if (!err) {
-          resolve("Email sent");
+          resolve("Your message has been sent");
         } else {
           reject(err.message);
         }
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
-    return NextResponse.json({ message: "Email sent" });
+    return NextResponse.json({ message: "Your message has been sent" });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });
   }
