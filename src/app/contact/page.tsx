@@ -5,6 +5,7 @@ import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import Footer from "@/components/ui/footer";
 import ContactIcons from "@/components/contact/contact-icons";
+import ContactForm from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
   title: "Portfolio - Contact",
@@ -17,31 +18,35 @@ export default function ContactPage() {
     <>
       <HeaderWithNavBar />
       <MaxWidthWrapper>
-        <main className="h-[85vh] my-auto grid md:grid-cols-2">
-          <section className="flex flex-col justify-center">
-            <span className="block font-handwritten text-6xl lowercase">
-              let&apos;s
-            </span>
-            <h1 className="text-7xl lg:text-9xl mb-5 font-secondary uppercase">
-              Get in touch
-            </h1>
+        <main className="my-auto grid md:grid-cols-2">
+          <section className="flex flex-col gap-3 justify-center items-center md:items-start">
+            <div>
+              <span className="block font-handwritten text-6xl lowercase">
+                let&apos;s
+              </span>
+              <h1 className="text-7xl lg:text-9xl mb-5 font-secondary uppercase">
+                Get in touch
+              </h1>
+            </div>
+
+            <ContactIcons icons={["github", "linkedin"]} className="text-5xl" />
+            <a
+              className="border-b-2 border-dashed border-foreground"
+              href="mailto:sandra.hkannerberg@gmail.com"
+            >
+              sandra.hkannerberg@gmail.com
+            </a>
           </section>
 
           {/* TODO: update to a contact form */}
-          <section className="flex flex-col justify-center items-center gap-5 bg-foreground text-background">
-            <div className="text-center w-[fit-content] text-lg">
-              <p className="uppercase mb-0">Email</p>
-              <a
-                className="border-b-2 border-dashed border-background"
-                href="mailto:sandra.hkannerberg@gmail.com"
-              >
-                sandra.hkannerberg@gmail.com
-              </a>
+          <section className="flex flex-col gap-3 justify-center items-center bg-foreground text-background shadow-lg rounded py-5 my-10 md:my-0">
+            <div className="text-center">
+              <h2 className="text-lg uppercase">Let&apos;s work together!</h2>
+              <p>
+                Feel free to send me a message, e-mail or contact me on LinkedIn
+              </p>
             </div>
-            <ContactIcons
-              icons={["github", "linkedin"]}
-              className="text-5xl text-primary"
-            />
+            <ContactForm />
           </section>
         </main>
       </MaxWidthWrapper>

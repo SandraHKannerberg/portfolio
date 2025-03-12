@@ -38,6 +38,7 @@ export default function WorkPage() {
               alt="Illustration of a businesswoman"
               width={400}
               height={400}
+              priority
             />
           </figure>
           {/* TODO: ADD A SECTION FOR HIGHLIGHTS ?

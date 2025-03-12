@@ -21,9 +21,9 @@ export default function OneByOneAnimation({
 
   return (
     <MotionComponent
-      initial={{ opacity: 0, y: -100, scale: 0.9 }} // Börjar ovanför skärmen
-      whileInView={{ opacity: 1, y: 0, scale: 1 }} // Faller ner till sin position
-      viewport={{ once: true, amount: 0.2 }} // Startar animation när 20% syns
+      initial={{ opacity: 0, y: -100, scale: 0.9 }} // Start above the screen
+      whileInView={{ opacity: 1, y: 0, scale: 1 }} // Fall down effect
+      viewport={{ once: true, amount: 0.2 }} // Starts when 20% are shown
       transition={{ duration, delay: delayIndex * 0.2 }}
       className={className}
     >

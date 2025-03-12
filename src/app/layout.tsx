@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Alice, Antic_Didone, Mr_De_Haviland } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const alice = Alice({
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body
         className={`${alice.variable} ${anticDidone.variable} ${mrDeHaviland.variable} antialiased leading-7 font-primary non-italic`}
       >
+        <Toaster />
         {children}
       </body>
     </html>
