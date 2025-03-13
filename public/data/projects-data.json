@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Fullstack e-commerce",
-    "description": "A complete e-commerce platform built with the MERN stack, showcasing my ability to develop both frontend and backend solutions, including database management, user authentication, payment integration and CRUD-operations.",
+    "description": "A complete e-commerce platform built with MERN-stack, showcasing my ability to develop both frontend and backend solutions. The project includes database management, user authentication, payment integration and CRUD-operations.",
     "img": "/images/project-images/ecommerce.png",
     "tech": "MERN-stack (MongoDB, Express, React, Node.js), TypeScript, Bootstrap and Stripe integration.",
     "links": {
@@ -34,7 +34,7 @@
   {
     "id": 4,
     "title": "Bucket list",
-    "description": "A responsive bucket list app using HTML, CSS, JavaScript, and localStorage, demonstrating my ability to create dynamic functionality and manage persistent data.",
+    "description": "A responsive bucket list app using HTML, CSS, JavaScript and localStorage. The project demonstrating my ability to create dynamic functionality and manage persistent data.",
     "img": "/images/project-images/bucketlist.png",
     "tech": "HTML, CSS and JavaScript",
     "links": {
@@ -44,7 +44,7 @@
   {
     "id": 5,
     "title": "CRUD-app",
-    "description": "A CRUD app for managing an artist collection, built with HTML, CSS, and JavaScript, fetching data from an external API to demonstrate my skills in handling dynamic data and interactive functionality.",
+    "description": "A CRUD app for managing an artist collection, built with HTML, CSS and JavaScript. I am fetching data from an external API to demonstrate my skills in handling dynamic data and interactive functionality.",
     "img": "/images/project-images/crud.png",
     "tech": "HTML, CSS, JavaScript and API integration",
     "links": {

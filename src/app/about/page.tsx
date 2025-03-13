@@ -30,21 +30,21 @@ export default function AboutPage() {
           </section>
           <section className="grid items-center">
             <p className="mb-5">
-              My name is Sandra Höst Kannerberg and I am a fullstack skilled
+              My name is Sandra Höst Kannerberg and I&apos;m a fullstack skilled
               developer based i Stockholm, with a truly strong passion for
               frontend development.
             </p>
             <p className="mb-5">
-              I am passionate about turning ideas into interactive experiences.
-              With 3 years of experience in web development and 15+ years in
-              customer relations within the banking sector, I bring a unique
-              user perspective, creativity, and technical expertise to every
-              project.
+              I&apos;m passionate about turning ideas into interactive
+              experiences. With 3 years of experience in web development and 15+
+              years in customer relations within the banking sector, I bring a
+              unique user perspective, creativity, and technical expertise to
+              every project.
             </p>
             <p className="mb-5">
-              I am committed to user-friendliness, accessibility, and crafting
-              high-quality solutions that transform complex ideas into intuitive
-              and engaging interfaces.
+              I&apos;m committed to user-friendliness, accessibility, and
+              crafting high-quality solutions that transform complex ideas into
+              intuitive and engaging interfaces.
             </p>
           </section>
           <figure className="justify-self-center grid items-center w-80 h-80">

@@ -10,7 +10,7 @@ import ContactForm from "@/components/contact/contact-form";
 export const metadata: Metadata = {
   title: "Portfolio - Contact",
   description:
-    "Get in touch with Sandra Höst Kannerberg. Reach out for inquiries, feedback, or collaboration opportunities. I'm here to help and connect!",
+    "Get in touch with Sandra Höst Kannerberg. Reach out for inquiries, feedback, or collaboration opportunities.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
     <>
       <HeaderWithNavBar />
       <MaxWidthWrapper>
-        <main className="my-auto grid md:grid-cols-2">
+        <main className="my-[10vh] grid md:grid-cols-2">
           <section className="flex flex-col gap-3 justify-center items-center md:items-start">
             <div>
               <span className="block font-handwritten text-6xl lowercase">
