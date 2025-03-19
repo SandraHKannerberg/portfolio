@@ -19,7 +19,7 @@ export default function ContactPage() {
       <HeaderWithNavBar />
       <MaxWidthWrapper>
         <main className="my-[10vh] grid md:grid-cols-2">
-          <section className="flex flex-col gap-3 justify-center items-center md:items-start">
+          <section className="flex flex-col gap-3 justify-center items-center md:items-start text-center md:text-left">
             <div>
               <span className="block font-handwritten text-6xl lowercase">
                 let&apos;s
@@ -31,7 +31,7 @@ export default function ContactPage() {
 
             <ContactIcons icons={["github", "linkedin"]} className="text-5xl" />
             <a
-              className="border-b-2 border-dashed border-foreground"
+              className="border-b-2 border-dashed border-foreground hover:font-bold"
               href="mailto:sandra.hkannerberg@gmail.com"
             >
               sandra.hkannerberg@gmail.com
