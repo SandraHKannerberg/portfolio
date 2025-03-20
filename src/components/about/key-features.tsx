@@ -1,5 +1,12 @@
 "use client";
-import { Heart, Palette, PersonStanding, Rocket, Search } from "lucide-react";
+import {
+  Heart,
+  Lightbulb,
+  Palette,
+  PersonStanding,
+  Rocket,
+  Search,
+} from "lucide-react";
 import WavePulseAnimation from "../animations/wave-pulse";
 
 import {
@@ -11,9 +18,10 @@ import {
 const features = [
   { icon: <Palette size={48} />, text: "Creative" },
   { icon: <Search size={48} />, text: "Eye for Details" },
-  { icon: <Heart size={48} />, text: "Ambitious" },
+  { icon: <Heart size={48} />, text: "Strong commitment" },
   { icon: <PersonStanding size={48} />, text: "User Focus" },
   { icon: <Rocket size={48} />, text: "Curious" },
+  { icon: <Lightbulb size={48} />, text: "Problem solver" },
 ];
 
 export default function KeyFeatures() {

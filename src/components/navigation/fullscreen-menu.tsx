@@ -16,7 +16,7 @@ import {
 export default function FullscreenMenu() {
   return (
     <Drawer>
-      <DrawerTrigger aria-label="Menu" className="flex justify-self-end">
+      <DrawerTrigger aria-label="Menu" className="w-full flex justify-end">
         <AlignJustify></AlignJustify>
       </DrawerTrigger>
       <DrawerContent

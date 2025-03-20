@@ -18,14 +18,16 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
       className="col-span-12"
     >
       <CarouselContent>
-        {projects.map((project) => (
-          <CarouselItem
-            key={project.id}
-            className="flex-shrink-0 md:basis-1/2 lg:basis-1/3"
-          >
-            <ProjectCard project={project} />
-          </CarouselItem>
-        ))}
+        {projects
+          .sort((a, b) => b.id - a.id)
+          .map((project) => (
+            <CarouselItem
+              key={project.id}
+              className="flex-shrink-0 md:basis-1/2 lg:basis-1/3"
+            >
+              <ProjectCard project={project} />
+            </CarouselItem>
+          ))}
       </CarouselContent>
       <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
       <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />

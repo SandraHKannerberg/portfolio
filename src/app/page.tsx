@@ -5,6 +5,7 @@ import FullscreenMenu from "@/components/navigation/fullscreen-menu";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 import PageScroll from "@/components/animations/page-scroll";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
@@ -42,13 +43,6 @@ export default function HomePage() {
               Portfolio
             </span>
           </h1>
-        </section>
-
-        <section className="absolute bottom-23 flex flex-col justify-center items-center">
-          <small className="absolute bottom-18">Scroll</small>
-          <div className="h-12 w-12 flex justify-center items-center rounded-full shadow-md animate-bounce bg-muted">
-            <ArrowDown />
-          </div>
         </section>
       </header>
     </PageScroll>
