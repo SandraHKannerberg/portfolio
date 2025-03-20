@@ -32,9 +32,9 @@ export default async function ProjectsPage() {
             <h1 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
               Projects
             </h1>
-            <a href="https://github.com/SandraHKannerberg/portfolio">
+            <a href="https://github.com/SandraHKannerberg" target="_blank">
               <Button className="rounded shadow uppercase mt-5 mb-10 cursor-pointer hover:bg-secondary hover:text-background">
-                Portfolio source code
+                Follow me on GitHub
               </Button>
             </a>
           </section>
