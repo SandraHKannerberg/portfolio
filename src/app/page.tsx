@@ -3,9 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import FullscreenMenu from "@/components/navigation/fullscreen-menu";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
 import PageScroll from "@/components/animations/page-scroll";
-import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
