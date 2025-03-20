@@ -34,31 +34,31 @@ If you want to run this project locally:
 
 2. **Open a terminal and navigate to:**
 
-```bash
-cd portfolio
+   ```bash
+   cd portfolio
 
-```
+   ```
 
 3. **Install dependencies:**
 
-```bash
-npm install
+   ```bash
+   npm install
 
-```
+   ```
 
 4. **Run the development server:**
 
-```bash
-npm run dev
+   ```bash
+   npm run dev
 
-```
+   ```
 
 Open http://localhost:3000 in your browser.
 
 # 📌 Future Improvements
 
-Adding more projects and interactive elements
-Exploring additional animations and microinteractions
+Adding more projects and interactive elements </br>
+Exploring additional animations and microinteractions </br>
 
 # 📬 Get in Touch
 
