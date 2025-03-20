@@ -25,23 +25,43 @@ Achieving a high Lighthouse score
 
 If you want to run this project locally:
 
-Clone the repository:
-git clone https://github.com/SandraHKannerberg/portfolio
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/SandraHKannerberg/portfolio
+
+   ```
+
+2. **Open a terminal and navigate to:**
+
+```bash
 cd portfolio
 
-Install dependencies:
+```
+
+3. **Install dependencies:**
+
+```bash
 npm install
 
-Run the development server:
+```
+
+4. **Run the development server:**
+
+```bash
 npm run dev
+
+```
 
 Open http://localhost:3000 in your browser.
 
-📌 Future Improvements
+# 📌 Future Improvements
+
 Adding more projects and interactive elements
 Exploring additional animations and microinteractions
 
-📬 Get in Touch
+# 📬 Get in Touch
+
 If you're interested in working together or just want to say hi, feel free to connect with me on LinkedIn or check out my portfolio live at:
 
 🌍 [Visit my Portfolio](https://sandra-dev-portfolio.vercel.app)
