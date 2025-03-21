@@ -31,7 +31,7 @@ export default function AboutPage() {
           <section className="grid items-center">
             <p className="mb-5">
               My name is Sandra Höst Kannerberg and I&apos;m a fullstack skilled
-              developer based i Stockholm, with a truly strong passion for
+              developer based in Stockholm, with a truly strong passion for
               frontend development.
             </p>
             <p className="mb-5">

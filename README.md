@@ -8,18 +8,18 @@ Welcome to my personal developer portfolio! This project showcases my skills, ex
 
 This portfolio is built using:
 
-Next.js – ensuring high performance, strong SEO, and seamless scalability.
-Tailwind CSS – for efficient and responsive styling
-ShadCN – for sleek, reusable UI components
-Framer Motion – for smooth and engaging animations
+- Next.js – ensuring high performance, strong SEO, and seamless scalability.
+- Tailwind CSS – for efficient and responsive styling
+- ShadCN – for sleek, reusable UI components
+- Framer Motion – for smooth and engaging animations
 
 # 🎯 Key Features
 
-Fully responsive design – Optimized for all screen sizes
-Smooth animations – Enhancing user interaction with Framer Motion
-High accessibility – Built with best practices to ensure usability for all users
-Fast and optimized – Leveraging Next.js for better performance and SEO
-Achieving a high Lighthouse score
+- Fully responsive design – Optimized for all screen sizes
+- Smooth animations – Enhancing user interaction with Framer Motion
+- High accessibility – Built with best practices to ensure usability for all users
+- Fast and optimized – Leveraging Next.js for better performance and SEO
+- Achieving a high Lighthouse score
 
 # 🛠️ Getting Started
 
@@ -57,15 +57,16 @@ Open http://localhost:3000 in your browser.
 
 # 📌 Future Improvements
 
-Adding more projects and interactive elements </br>
-Exploring additional animations and microinteractions </br>
+- Continuously update with new projects </br>
+- Exploring additional animations and microinteractions </br>
+- Dark/Light mode </br>
 
 # 📬 Get in Touch
 
-If you're interested in working together or just want to say hi, feel free to connect with me on LinkedIn or check out my portfolio live at:
+If you're interested in working together or just want to say hi, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/sandra-h%C3%B6st-kannerberg/) or follow me here on GitHub
 
-🌍 [Visit my Portfolio](https://sandra-dev-portfolio.vercel.app)
+# 🌍 Check out my portfolio live at:
+
+[Visit my Portfolio](https://sandra-dev-portfolio.vercel.app)
 
 # 🚧 Know issues (work in progress)
-
-- Bug in mobile menu. When open the menu it is a problem to click on the link for the same page that you already in. Fix this so the menu closes when choose the same page.
