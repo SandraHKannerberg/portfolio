@@ -12,10 +12,17 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function FullscreenMenu() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleClose = () => setOpen(false);
+
   return (
-    <Drawer>
+    <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger aria-label="Menu" className="w-full flex justify-end">
         <AlignJustify></AlignJustify>
       </DrawerTrigger>
@@ -37,37 +44,62 @@ export default function FullscreenMenu() {
 
         <Link
           href="/"
-          className="focus:bg-secondary focus:text-background"
+          className={`relative focus:bg-secondary focus:text-background ${
+            pathname === "/"
+              ? "font-bold after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-primary after:w-full"
+              : "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-primary hover:after:w-full transition-all duration-300"
+          }`}
           scroll={false}
+          onClick={handleClose}
         >
           Home
         </Link>
 
         <Link
           href="/about"
-          className="focus:bg-secondary focus:text-background"
+          className={`relative focus:bg-secondary focus:text-background ${
+            pathname === "/about"
+              ? "font-bold after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-primary after:w-full"
+              : "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-primary hover:after:w-full transition-all duration-300"
+          }`}
           scroll={false}
+          onClick={handleClose}
         >
           About
         </Link>
         <Link
           href="/work"
-          className="focus:bg-secondary focus:text-background"
+          className={`relative focus:bg-secondary focus:text-background ${
+            pathname === "/work"
+              ? "font-bold after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-primary after:w-full"
+              : "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-primary hover:after:w-full transition-all duration-300"
+          }`}
           scroll={false}
+          onClick={handleClose}
         >
           Work
         </Link>
         <Link
           href="/projects"
-          className="focus:bg-secondary focus:text-background"
+          className={`relative focus:bg-secondary focus:text-background ${
+            pathname === "/projects"
+              ? "font-bold after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-primary after:w-full"
+              : "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-primary hover:after:w-full transition-all duration-300"
+          }`}
           scroll={false}
+          onClick={handleClose}
         >
           Projects
         </Link>
         <Link
           href="/contact"
-          className="focus:bg-secondary focus:text-background"
+          className={`relative focus:bg-secondary focus:text-background ${
+            pathname === "/contact"
+              ? "font-bold after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:bg-primary after:w-full"
+              : "after:absolute after:left-0 after:right-0 after:bottom-0 after:h-1 after:w-0 after:bg-primary hover:after:w-full transition-all duration-300"
+          }`}
           scroll={false}
+          onClick={handleClose}
         >
           Contact
         </Link>
