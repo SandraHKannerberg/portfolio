@@ -25,14 +25,14 @@ Achieving a high Lighthouse score
 
 If you want to run this project locally:
 
-1. **Clone the repository:**
+1. **Open a terminal and clone the repository:**
 
    ```bash
    git clone https://github.com/SandraHKannerberg/portfolio
 
    ```
 
-2. **Open a terminal and navigate to:**
+2. **Navigate to in your terminal:**
 
    ```bash
    cd portfolio
@@ -65,3 +65,7 @@ Exploring additional animations and microinteractions </br>
 If you're interested in working together or just want to say hi, feel free to connect with me on LinkedIn or check out my portfolio live at:
 
 🌍 [Visit my Portfolio](https://sandra-dev-portfolio.vercel.app)
+
+# 🚧 Know issues (work in progress)
+
+- Bug in mobile menu. When open the menu it is a problem to click on the link for the same page that you already in. Fix this so the menu closes when choose the same page.
