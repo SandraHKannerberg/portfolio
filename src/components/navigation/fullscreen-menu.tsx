@@ -28,13 +28,13 @@ export default function FullscreenMenu() {
       </DrawerTrigger>
       <DrawerContent
         aria-describedby="dropdown-menu"
-        className="top-0 font-secondary flex flex-col justify-between uppercase p-5 text-5xl gap-5"
+        className="top-0 font-secondary flex flex-col gap-5 uppercase p-5 text-5xl"
       >
         <DrawerHeader>
           <DrawerClose className="flex justify-center">
             <X></X>
           </DrawerClose>
-          <DrawerTitle className="text-4xl flex justify-between items-center sr-only">
+          <DrawerTitle className="text-4xl flex items-center sr-only">
             Menu
           </DrawerTitle>
           <DrawerDescription className="sr-only">
