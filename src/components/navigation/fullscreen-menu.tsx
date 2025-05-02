@@ -16,24 +16,25 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function FullscreenMenu() {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const handleClose = () => setOpen(false);
+  const handleClose = () => setIsOpen(false);
 
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
+    <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
       <DrawerTrigger aria-label="Menu" className="w-full flex justify-end">
         <AlignJustify></AlignJustify>
       </DrawerTrigger>
+
       <DrawerContent
         aria-describedby="dropdown-menu"
-        className="top-0 font-secondary flex flex-col gap-5 uppercase p-5 text-5xl"
+        className="font-secondary flex flex-col gap-5 uppercase p-5 text-5xl z-1000"
       >
+        <DrawerClose className="flex justify-end">
+          <X />
+        </DrawerClose>
         <DrawerHeader>
-          <DrawerClose className="flex justify-center">
-            <X></X>
-          </DrawerClose>
           <DrawerTitle className="text-4xl flex items-center sr-only">
             Menu
           </DrawerTitle>
