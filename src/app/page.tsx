@@ -10,10 +10,6 @@ export default function HomePage() {
     <PageScroll>
       {/* Hero section */}
       <header className="flex flex-col items-center justify-center relative w-screen h-screen">
-        <div className="z-1 absolute top-0 right-0 p-5">
-          <FullscreenMenu></FullscreenMenu>
-        </div>
-
         <Image
           src="/images/background.jpg"
           alt="Background image showing crumpled paper"

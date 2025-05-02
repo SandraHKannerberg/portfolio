@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
 
-import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import Footer from "@/components/ui/footer";
 import ContactIcons from "@/components/contact/contact-icons";
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <HeaderWithNavBar />
       <MaxWidthWrapper>
         <main className="my-[10vh] grid md:grid-cols-2">
           <section className="flex flex-col gap-3 justify-center items-center md:items-start text-center md:text-left">
