@@ -15,6 +15,7 @@ export const animatePageIn = () => {
     }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 100,
       stagger: 0.2,
+      ease: "power2.in",
     });
   }
 };
@@ -33,6 +34,7 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
     }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
       yPercent: 0,
       stagger: 0.2,
+      ease: "power2.out",
       onComplete: () => {
         router.push(href);
       },

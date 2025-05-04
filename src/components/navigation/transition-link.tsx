@@ -9,7 +9,7 @@ interface TransitionLinkProps {
   className?: string;
 }
 
-const TransitionLink = ({ href, label, className }: TransitionLinkProps) => {
+const TransitionLink = ({ href, label }: TransitionLinkProps) => {
   const router = useRouter();
   const pathname = usePathname();
 
