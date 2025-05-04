@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
-import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import CvBtn from "@/components/contact/cv-btn";
 import TimeLine from "@/components/work/time-line";
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
-      <HeaderWithNavBar />
       <MaxWidthWrapper>
         <main className="grid grid-cols-12">
           <section className="col-span-12 md:col-span-6">

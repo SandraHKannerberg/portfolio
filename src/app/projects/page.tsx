@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
-import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
 import { Button } from "@/components/ui/button";
 import ProjectsList from "@/components/projects/projects-list";
@@ -22,7 +21,6 @@ export default async function ProjectsPage() {
 
   return (
     <>
-      <HeaderWithNavBar />
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 md:grid-cols-12">
           <section className="col-span-12 sm:col-span-6">

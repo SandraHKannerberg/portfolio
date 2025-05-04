@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import MaxWidthWrapper from "@/components/ui/max-width-wrapper";
-import HeaderWithNavBar from "@/components/navigation/header-with-navbar";
 import Footer from "@/components/ui/footer";
 import KeyFeatures from "@/components/about/key-features";
 
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <HeaderWithNavBar></HeaderWithNavBar>
       <MaxWidthWrapper>
         <main className="grid grid-cols-1 gap-5 md:grid-cols-2">
           <section className="flex flex-col justify-center md:col-span-2">
