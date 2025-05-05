@@ -16,8 +16,8 @@ const Skills = () => {
   const skillsData = data as Skill[];
 
   return (
-    <section id="skills" className="grid grid-cols-12 my-20">
-      <div className="col-span-12 md:col-span-6 flex flex-col justify-end">
+    <section id="skills" className="grid grid-cols-12 my-30">
+      <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10">
         <span className="block font-handwritten text-6xl lowercase">
           my tech
         </span>
@@ -37,7 +37,6 @@ const Skills = () => {
         ))}
       </section>
     </section>
-    // </section>
   );
 };
 

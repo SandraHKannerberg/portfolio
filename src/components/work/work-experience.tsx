@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 const WorkExperience = () => {
   return (
     <section id="work" className="grid grid-cols-12 my-20">
-      <CvDownload />
       <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center items-end lg:justify-self-start w-80 h-80">
         <Image
           src="/images/work.svg"

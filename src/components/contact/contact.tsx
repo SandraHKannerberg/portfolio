@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="my-[10vh] grid md:grid-cols-2">
+    <section id="contact" className="grid md:grid-cols-2 my-30">
       <section className="flex flex-col gap-3 justify-center items-center md:items-start text-center md:text-left">
         <div>
           <span className="block font-handwritten text-6xl lowercase">

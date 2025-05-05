@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import ContactLinks from "../contact/contact-links";
-import MaxWidthWrapper from "./max-width-wrapper";
 
 export default function footer() {
   return (
