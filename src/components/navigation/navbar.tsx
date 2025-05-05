@@ -1,17 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import TransitionLink from "./transition-link";
 
-export default function NavBar() {
+const NavBar = () => {
   return (
     <>
-      <nav className="flex justify-center gap-10 uppercase p-3">
+      <nav className="flex gap-10 uppercase p-3 font-secondary">
         <TransitionLink href="/" label="Home"></TransitionLink>
-        <TransitionLink href="/about" label="About"></TransitionLink>
-        <TransitionLink href="/work" label="Work"></TransitionLink>
-        <TransitionLink href="/projects" label="Projects"></TransitionLink>
-        <TransitionLink href="/contact" label="Contact"></TransitionLink>
+        <Link href="#about">About</Link>
+        <Link href="#work">Work</Link>
+        <Link href="#skills">Skills</Link>
+        <Link href="#projects">Projects</Link>
+
+        <Link href="#contact">Contact</Link>
       </nav>
     </>
   );
-}
+};
+
+export default NavBar;
+
+/* <TransitionLink href="/contact" label="Contact"></TransitionLink> */
