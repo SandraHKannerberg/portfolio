@@ -1,31 +1,34 @@
 "use client";
+import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { TypeAnimation } from "react-type-animation";
-
-import FullscreenMenu from "@/components/navigation/fullscreen-menu";
-import Image from "next/image";
-import PageScroll from "@/components/animations/page-scroll";
+import About from "@/components/about/about";
+import Work from "@/components/work/work-experience";
+import ScrollDown from "@/components/ui/scroll-down";
+import Skills from "@/components/skills/skills";
+import Projects from "@/components/projects/projects";
+import Contact from "@/components/contact/contact";
 
 export default function HomePage() {
+  const letters = "Portfolio".split("");
   return (
-    <PageScroll>
-      {/* Hero section */}
-      <header className="flex flex-col items-center justify-center relative w-screen h-screen">
-        <Image
-          src="/images/background.jpg"
-          alt="Background image showing crumpled paper"
-          fill
-          className="bg-cover bg-center"
-          priority
-        />
-        <section className="relative w-full z-1 flex flex-col items-center justify-center">
-          <h1 className="font-handwritten">
+    <>
+      <MaxWidthWrapper>
+        {/* Hero section */}
+        <section className="relative grid grid-cols-2 p-10 bg-[url('/images/coloreffect-bg.png')] bg-center bg-no-repeat">
+          <h1 className="font-handwritten md:pl-10 col-span-2 md:col-span-1 md:flex md:items-center z-5">
             <TypeAnimation
               sequence={[
-                "a frontend",
+                "frontend",
                 1000,
-                "a fullstack",
+                "fullstack",
                 1000,
-                "a creative",
+                "creative",
+                1000,
+                "design",
+                1000,
+                "curious",
+                1000,
+                "portfolio",
                 1000,
               ]}
               wrapper="span"
@@ -33,12 +36,30 @@ export default function HomePage() {
               speed={50}
               repeat={Infinity}
             />
-            <span className="uppercase text-6xl md:text-9xl font-secondary">
-              Portfolio
-            </span>
           </h1>
+          <section className="grid grid-cols-3 gap-10 col-span-2 md:col-span-1 z-5">
+            {letters.map((char, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center font-secondary text-8xl uppercase"
+              >
+                {char}
+              </div>
+            ))}
+          </section>
+          <ScrollDown />
+          {/* TODO: open this when scroll animation are done */}
+          {/* Gradient fade */}
+          {/* <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-background z-5" /> */}
         </section>
-      </header>
-    </PageScroll>
+        <main>
+          <About />
+          <Work />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </MaxWidthWrapper>
+    </>
   );
 }
