@@ -20,3 +20,41 @@ export const scrollToSection = (targetId: string, offset: number = 70) => {
     ease: "power2.inOut",
   });
 };
+
+// Animation for letters - bounce one by one in random order
+export const fallingLettersAnimation = (target: Element): Promise<void> => {
+  return new Promise((resolve) => {
+    const letters = target.querySelectorAll(".letter");
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: target,
+        start: "top 95%",
+        toggleActions: "play none none none",
+      },
+      onComplete: () => resolve(),
+    });
+
+    tl.fromTo(
+      letters,
+      {
+        y: () => gsap.utils.random(-300, -100),
+        x: () => gsap.utils.random(-100, 100),
+        rotation: () => gsap.utils.random(-45, 45),
+        opacity: 0,
+      },
+      {
+        y: 0,
+        x: 0,
+        rotation: 0,
+        opacity: 1,
+        duration: 3,
+        ease: "bounce.out",
+        stagger: {
+          each: 0.2,
+          from: "random",
+        },
+      }
+    );
+  });
+};
