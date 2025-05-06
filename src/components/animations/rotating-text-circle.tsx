@@ -5,6 +5,8 @@ interface RotatingTextCircleProps {
   fontSize?: string;
   fontFamily?: string;
   fill?: string;
+  width?: string;
+  height?: string;
 }
 
 const RotatingTextCircle = ({
@@ -12,9 +14,11 @@ const RotatingTextCircle = ({
   fontSize = "25",
   fontFamily = "Alice",
   fill = "#303c31",
+  width = "300",
+  height = "300",
 }: RotatingTextCircleProps) => {
   return (
-    <svg width="300" height="300" viewBox="0 0 300 300">
+    <svg width={width} height={height} viewBox="0 0 300 300">
       {/* Def circle path (unvisible) */}
       <defs>
         <path

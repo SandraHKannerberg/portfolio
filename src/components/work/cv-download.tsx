@@ -17,10 +17,11 @@ const CvDownload = () => {
         variant="default"
         className="absolute w-25 h-25 rounded-full text-2xl uppercase cursor-pointer shadow hover:bg-secondary hover:text-background hover:shadow-md z-5"
         onClick={handleDownload}
+        aria-label="Download CV document"
       >
         CV
       </Button>
-      <RotatingTextCircle text="Download -- Download -- Download -- Download" />
+      <RotatingTextCircle text="Download CV - Download - Download CV - Download -" />
     </div>
   );
 };

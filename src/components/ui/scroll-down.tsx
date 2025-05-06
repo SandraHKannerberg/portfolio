@@ -5,18 +5,29 @@ import RotatingTextCircle from "../animations/rotating-text-circle";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 
-const ScrollDown = () => {
+const ScrollDown = ({ className }: { className?: string }) => {
   return (
-    <div className="relative circle flex justify-center items-center">
-      <Link href="#about" className="absolute">
+    <div
+      className={`relative flex justify-center items-center w-fit ${className} `}
+    >
+      <Link
+        href="#about"
+        className="absolute"
+        aria-label="Scroll down for more content"
+      >
         <Button
           variant="default"
-          className="w-25 h-25 rounded-full uppercase cursor-pointer shadow hover:bg-secondary hover:text-background hover:shadow-md z-5 flex justify-center items-center"
+          className="w-15 h-15 rounded-full uppercase cursor-pointer shadow hover:bg-secondary hover:text-background hover:shadow-md z-5 flex justify-center items-center"
         >
+          <p className="sr-only">Scroll down</p>
           <ArrowDown />
         </Button>
       </Link>
-      <RotatingTextCircle text="Scroll Down -- Scroll Down -- Scroll Down" />
+      <RotatingTextCircle
+        text="Scroll down -- Explore my portfolio -- Scroll down"
+        width="150"
+        height="150"
+      />
     </div>
   );
 };
