@@ -1,43 +1,22 @@
+// Animations using GSAP
+
 import { gsap } from "gsap";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-export const animatePageIn = () => {
-  const bannerOne = document.getElementById("banner-1");
-  const bannerTwo = document.getElementById("banner-2");
-  const bannerThree = document.getElementById("banner-3");
-  const bannerFour = document.getElementById("banner-4");
+gsap.registerPlugin(ScrollToPlugin);
 
-  if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-    const tl = gsap.timeline();
-
-    tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 0,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 100,
-      stagger: 0.2,
-      ease: "power2.in",
-    });
-  }
-};
-
-export const animatePageOut = (href: string, router: AppRouterInstance) => {
-  const bannerOne = document.getElementById("banner-1");
-  const bannerTwo = document.getElementById("banner-2");
-  const bannerThree = document.getElementById("banner-3");
-  const bannerFour = document.getElementById("banner-4");
-
-  if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-    const tl = gsap.timeline();
-
-    tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yProcent: -100,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 0,
-      stagger: 0.2,
-      ease: "power2.out",
-      onComplete: () => {
-        router.push(href);
-      },
-    });
-  }
+/**
+ * Soft scroll when click on i link in the navbar
+ * @param targetId section id
+ * @param offset value in pixels, for example navbar hight
+ */
+export const scrollToSection = (targetId: string, offset: number = 70) => {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: `#${targetId}`,
+      offsetY: offset,
+    },
+    ease: "power2.inOut",
+  });
 };
