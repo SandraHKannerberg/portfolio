@@ -3,12 +3,12 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import ContactLinks from "../contact/contact-links";
 
-export default function footer() {
+const Footer = () => {
   return (
     <footer className="flex flex-col mt-10 mb-5 px-5">
-      <section className="flex justify-between">
+      <section className="flex justify-between items-start">
         <div className="flex flex-col gap-3">
-          <p className="font-secondary text-5xl">sandra.</p>
+          <h2 className="font-secondary text-5xl">sandra.</h2>
           <Link href="/contact">
             <Button
               variant="outline"
@@ -22,8 +22,10 @@ export default function footer() {
       </section>
 
       <small className="text-center text-xs mt-5">
-        Copyright &copy; {new Date().getFullYear()}
+        Copyright &copy; {new Date().getFullYear()} - All rights reserved
       </small>
     </footer>
   );
-}
+};
+
+export default Footer;

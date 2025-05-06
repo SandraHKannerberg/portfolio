@@ -9,10 +9,14 @@ const Header = () => {
   return (
     <header className="sticky top-0 px-5 bg-background/75 z-[100] backdrop-blur-lg transition-all shadow-sm flex justify-between items-center m-auto">
       <Link href="/">
-        <p className="font-secondary text-5xl">sandra.</p>
+        <h2 className="font-secondary text-5xl">sandra.</h2>
       </Link>
 
-      {isMobile ? <FullscreenMenu /> : <NavBar />}
+      {isMobile ? (
+        <FullscreenMenu />
+      ) : (
+        <NavBar className="flex gap-10 uppercase p-3 font-secondary" />
+      )}
     </header>
   );
 };
