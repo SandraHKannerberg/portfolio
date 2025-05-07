@@ -12,12 +12,10 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useState } from "react";
-// import { usePathname } from "next/navigation";
 import NavBar from "./navbar";
 
 const DrawerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const pathname = usePathname();
 
   const handleClose = () => setIsOpen(false);
 
@@ -43,7 +41,7 @@ const DrawerMenu = () => {
           </DrawerDescription>
         </DrawerHeader>
         <NavBar
-          className="flex flex-col justify-between"
+          className="flex flex-col justify-between gap-8"
           onLinkClick={handleClose}
         />
       </DrawerContent>
