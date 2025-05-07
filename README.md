@@ -9,9 +9,11 @@ Welcome to my personal developer portfolio! This project showcases my skills, ex
 This portfolio is built using:
 
 - Next.js – ensuring high performance, strong SEO, and seamless scalability.
-- Tailwind CSS – for efficient and responsive styling
-- ShadCN – for sleek, reusable UI components
-- Framer Motion – for smooth and engaging animations
+- Tailwind CSS – for efficient and responsive styling.
+- ShadCN – for sleek, reusable UI components.
+- GSAP – for smooth and engaging animations.
+- react-vertical-timeline-component – to implement a neat and tidy timeline for my experience journey.
+- react-type-animation – a customizable React typing animation component.
 
 # 🎯 Key Features
 
@@ -58,7 +60,6 @@ Open http://localhost:3000 in your browser.
 # 📌 Future Improvements
 
 - Continuously update with new projects </br>
-- Exploring additional animations and microinteractions </br>
 - Dark/Light mode </br>
 
 # 📬 Get in Touch

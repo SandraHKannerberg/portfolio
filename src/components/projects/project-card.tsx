@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Project } from "@/lib/interfaces";
+import { IProject } from "@/lib/interfaces";
 
 import {
   Card,
@@ -9,8 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import LinkWithIcon from "../ui/link-with-icon";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: IProject }) {
   return (
     <Card className="h-full flex flex-col">
       <CardHeader className="flex-grow flex">
@@ -31,18 +32,15 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </CardContent>
       <CardFooter>
-        {Object.entries(project.links).map(([key, url]) =>
-          url ? (
-            <a
-              key={key}
-              href={url}
-              target="_blank"
-              className="col-span-1 flex justify-center items-center text-lg cursor-pointer hover:underline w-16 h-16"
-            >
-              {key === "github" ? "Github" : key === "demo" ? "Demo" : null}
-            </a>
-          ) : null
-        )}
+        {project.links.map((link, index) => (
+          <LinkWithIcon
+            key={index}
+            label={link.label}
+            url={link.url}
+            newTab
+            className="justify-center"
+          />
+        ))}
       </CardFooter>
     </Card>
   );
