@@ -1,4 +1,4 @@
-import { Project } from "@/lib/interfaces";
+import { IProject } from "@/lib/interfaces";
 import ProjectCard from "./project-card";
 
 import {
@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function ProjectList({ projects }: { projects: Project[] }) {
+export default function ProjectList({ projects }: { projects: IProject[] }) {
   return (
     <Carousel
       opts={{

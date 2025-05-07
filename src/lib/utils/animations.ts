@@ -1,43 +1,120 @@
+// Animations using GSAP
 import { gsap } from "gsap";
-import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export const animatePageIn = () => {
-  const bannerOne = document.getElementById("banner-1");
-  const bannerTwo = document.getElementById("banner-2");
-  const bannerThree = document.getElementById("banner-3");
-  const bannerFour = document.getElementById("banner-4");
+gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
-  if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-    const tl = gsap.timeline();
-
-    tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 0,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 100,
-      stagger: 0.2,
-      ease: "power2.in",
-    });
-  }
+/**
+ * Soft scroll when click on i link in the navbar
+ * @param targetId section id
+ * @param offset value in pixels, for example navbar hight
+ */
+export const scrollToSection = (targetId: string, offset: number = 100) => {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: `#${targetId}`,
+      offsetY: offset,
+    },
+    ease: "power2.inOut",
+  });
 };
 
-export const animatePageOut = (href: string, router: AppRouterInstance) => {
-  const bannerOne = document.getElementById("banner-1");
-  const bannerTwo = document.getElementById("banner-2");
-  const bannerThree = document.getElementById("banner-3");
-  const bannerFour = document.getElementById("banner-4");
+// Animation for letters - bounce one by one in random order
+export const fallingLettersAnimation = (target: Element): Promise<void> => {
+  return new Promise((resolve) => {
+    const letters = target.querySelectorAll(".letter");
 
-  if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-    const tl = gsap.timeline();
-
-    tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yProcent: -100,
-    }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-      yPercent: 0,
-      stagger: 0.2,
-      ease: "power2.out",
-      onComplete: () => {
-        router.push(href);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: target,
+        start: "top 95%",
+        toggleActions: "play none none none",
       },
+      onComplete: () => resolve(),
     });
-  }
+
+    tl.fromTo(
+      letters,
+      {
+        y: () => gsap.utils.random(-300, -100),
+        x: () => gsap.utils.random(-100, 100),
+        rotation: () => gsap.utils.random(-45, 45),
+        opacity: 0,
+      },
+      {
+        y: 0,
+        x: 0,
+        rotation: 0,
+        opacity: 1,
+        duration: 3,
+        ease: "bounce.out",
+        stagger: {
+          each: 0.2,
+          from: "random",
+        },
+      }
+    );
+  });
+};
+
+// Fade in sections content when scrolling
+export const fadeInOnScroll = (selector: string) => {
+  const elements = gsap.utils.toArray<HTMLElement>(selector);
+
+  elements.forEach((el) => {
+    gsap.fromTo(
+      el,
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+};
+
+// Drop one by one
+export const dropOneByOne = (selector: string) => {
+  const targets = gsap.utils.toArray<HTMLElement>(selector);
+
+  targets.forEach((container) => {
+    const items = container.querySelectorAll<HTMLElement>(".item-to-drop");
+
+    if (items.length === 0) return;
+
+    gsap.fromTo(
+      items,
+      {
+        opacity: 0,
+        y: -50,
+        scale: 0.9,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          once: true,
+        },
+      }
+    );
+  });
 };

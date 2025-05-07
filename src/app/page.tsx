@@ -1,44 +1,39 @@
 "use client";
-import { TypeAnimation } from "react-type-animation";
-
-import FullscreenMenu from "@/components/navigation/fullscreen-menu";
-import Image from "next/image";
-import PageScroll from "@/components/animations/page-scroll";
+import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
+import Hero from "@/components/hero/hero";
+import About from "@/components/about/about";
+import Work from "@/components/work/work-experience";
+import ScrollDown from "@/components/ui/scroll-down";
+import Skills from "@/components/skills/skills";
+import Projects from "@/components/projects/projects";
+import CvDownload from "@/components/work/cv-download";
+import Contact from "@/components/contact/contact";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { fadeInOnScroll } from "@/lib/utils/animations";
 
 export default function HomePage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    fadeInOnScroll(".fade-in");
+  }, []);
+
   return (
-    <PageScroll>
-      {/* Hero section */}
-      <header className="flex flex-col items-center justify-center relative w-screen h-screen">
-        <Image
-          src="/images/background.jpg"
-          alt="Background image showing crumpled paper"
-          fill
-          className="bg-cover bg-center"
-          priority
-        />
-        <section className="relative w-full z-1 flex flex-col items-center justify-center">
-          <h1 className="font-handwritten">
-            <TypeAnimation
-              sequence={[
-                "a frontend",
-                1000,
-                "a fullstack",
-                1000,
-                "a creative",
-                1000,
-              ]}
-              wrapper="span"
-              className="block text-5xl md:text-8xl p-5"
-              speed={50}
-              repeat={Infinity}
-            />
-            <span className="uppercase text-6xl md:text-9xl font-secondary">
-              Portfolio
-            </span>
-          </h1>
-        </section>
-      </header>
-    </PageScroll>
+    <>
+      <MaxWidthWrapper>
+        <Hero />
+        <ScrollDown />
+
+        <main ref={containerRef} className="space-y-40">
+          <About />
+          <CvDownload />
+          <Work />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </MaxWidthWrapper>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { Alice, Antic_Didone, Mr_De_Haviland } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const alice = Alice({
   variable: "--font-alice",
@@ -62,6 +63,7 @@ export default function RootLayout({
         <Header />
         <Toaster />
         {children}
+        <Footer />
       </body>
     </html>
   );
