@@ -1,26 +1,17 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-
-const links = [
-  {
-    href: "https://www.linkedin.com/in/sandra-h%C3%B6st-kannerberg-086a9b7b/",
-    label: "LinkedIn",
-  },
-  { href: "https://github.com/SandraHKannerberg", label: "GitHub" },
-];
+import { contactLinks } from "@/constants";
+import LinkWithIcon from "../ui/link-with-icon";
 
 const ContactLinks = () => {
   return (
     <section className="flex flex-col gap-3">
-      {links.map((link, index) => (
-        <Link
+      {contactLinks.map((link, index) => (
+        <LinkWithIcon
           key={index}
-          href={link.href}
-          className="flex justify-between items-center w-full gap-5 hover:underline"
-        >
-          <span>{link.label}</span>
-          <ArrowUpRight />
-        </Link>
+          label={link.label}
+          url={link.url}
+          className="justify-between"
+          newTab
+        />
       ))}
     </section>
   );
