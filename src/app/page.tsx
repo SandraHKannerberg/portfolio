@@ -25,7 +25,7 @@ export default function HomePage() {
         <Hero />
         <ScrollDown />
 
-        <main ref={containerRef} className="space-y-30">
+        <main ref={containerRef} className="space-y-40">
           <About />
           <CvDownload />
           <Work />
