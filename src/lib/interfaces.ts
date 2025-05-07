@@ -17,3 +17,11 @@ export interface ISkill {
   alt: string;
   name: string;
 }
+
+export interface IExperience {
+  companyOrSchool: string;
+  title: string;
+  date: string;
+  desc: string;
+  isEducation: false;
+}
