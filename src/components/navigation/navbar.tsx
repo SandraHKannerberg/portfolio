@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { scrollToSection } from "@/lib/utils/animations";
 import { usePathname, useRouter } from "next/navigation";
+import { useScrollSpy } from "@/lib/utils/use-scroll-spy";
 
 interface NavBarProps {
   className?: string;
+  onLinkClick?: () => void;
 }
 
 const navLinks = [
@@ -17,11 +19,15 @@ const navLinks = [
   { href: "/#contact", label: "Contact", id: "contact" },
 ];
 
-const NavBar = ({ className }: NavBarProps) => {
+const NavBar = ({ className, onLinkClick }: NavBarProps) => {
+  const activeId = useScrollSpy(
+    navLinks.map((l) => l.id),
+    100
+  );
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleNavClick = (sectionId: string, href: string) => {
+  const handleNavClick = (sectionId: string) => {
     if (pathname === "/") {
       scrollToSection(sectionId);
     } else {
@@ -33,16 +39,19 @@ const NavBar = ({ className }: NavBarProps) => {
   return (
     <>
       <nav>
-        {/* <TransitionLink href="/" label="Home"></TransitionLink> */}
-
         <ul className={className}>
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
+                data-id={link.id}
                 href={link.href}
-                onClick={() => handleNavClick(link.id, link.href)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.id);
+                  onLinkClick?.(); // Close DrawerMenu if this prop exists
+                }}
                 className={`relative pb-1 transition hover:font-bold ${
-                  pathname === link.id
+                  activeId === link.id
                     ? "font-bold after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full after:bg-primary"
                     : "after:w-0 after:bg-primary hover:after:w-full"
                 }`}
