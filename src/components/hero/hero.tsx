@@ -9,7 +9,7 @@ const Hero = () => {
       className="relative grid grid-cols-2 items-center max-h-screen py-10"
     >
       <section className="col-span-2 text-center md:col-span-1 md:text-left">
-        <h1 className="text-2xl md:text-3xl">Hello & welcome, I am Sandra</h1>
+        <h1 className="text-2xl md:text-2xl">Hello & welcome, I am Sandra</h1>
         <TypeAnimation
           sequence={[
             "creative coder",
@@ -17,6 +17,8 @@ const Hero = () => {
             "frontend addict",
             1000,
             "strong commitment",
+            1000,
+            "passion",
             1000,
             "curious",
             1000,
@@ -26,7 +28,7 @@ const Hero = () => {
             1000,
           ]}
           wrapper="span"
-          className="block text-5xl md:text-8xl p-5 font-handwritten"
+          className="block text-5xl md:text-5xl lg:text-8xl p-5 font-handwritten"
           speed={40}
           repeat={Infinity}
         />
