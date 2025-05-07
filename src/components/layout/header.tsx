@@ -1,8 +1,8 @@
 "use client";
 import NavBar from "../navigation/navbar";
-import FullscreenMenu from "../navigation/fullscreen-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Link from "next/link";
+import DrawerMenu from "../navigation/drawer-menu";
 
 const Header = () => {
   const isMobile = useIsMobile();
@@ -13,7 +13,7 @@ const Header = () => {
       </Link>
 
       {isMobile ? (
-        <FullscreenMenu />
+        <DrawerMenu />
       ) : (
         <NavBar className="flex gap-10 uppercase p-3 font-secondary" />
       )}
