@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import TimeLine from "@/components/work/time-line";
+import Timeline from "@/components/work/timeline";
 
 export const metadata: Metadata = {
   title: "Portfolio - Work",
@@ -31,7 +31,7 @@ const WorkExperience = () => {
       {/* Timeline */}
       <section className="col-span-12 my-16">
         <h3 className="pb-5 text-lg uppercase sr-only">Experience timeline</h3>
-        <TimeLine />
+        <Timeline />
       </section>
     </section>
   );
