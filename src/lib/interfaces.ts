@@ -1,18 +1,18 @@
-export interface Links {
-  github?: string;
-  demo?: string;
+export interface ILink {
+  label: string;
+  url: string;
 }
 
-export interface Project {
+export interface IProject {
   id: number;
   title: string;
   img: string;
   description: string;
   tech: string;
-  links: Links;
+  links: ILink[];
 }
 
-export interface Skill {
+export interface ISkill {
   src: string;
   alt: string;
   name: string;
