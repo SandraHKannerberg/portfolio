@@ -4,7 +4,7 @@ import Image from "next/image";
 import OneByOneAnimation from "../animations/one-by-one";
 
 import data from "../../../public/data/skills-data.json";
-import { Skill } from "@/lib/interfaces";
+import { ISkill } from "@/lib/interfaces";
 
 export const metadata: Metadata = {
   title: "Portfolio - Skills",
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const Skills = () => {
-  const skillsData = data as Skill[];
+  const skillsData = data as ISkill[];
 
   return (
-    <section id="skills" className="grid grid-cols-12 my-30">
+    <section id="skills" className="fade-in grid grid-cols-12">
       <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10">
         <span className="block font-handwritten text-6xl lowercase">
           my tech

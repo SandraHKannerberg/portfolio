@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-
-import CvDownload from "@/components/work/cv-download";
 import TimeLine from "@/components/work/time-line";
 
 export const metadata: Metadata = {
@@ -13,8 +11,8 @@ export const metadata: Metadata = {
 
 const WorkExperience = () => {
   return (
-    <section id="work" className="grid grid-cols-12 my-20">
-      <figure className="grid col-span-12 md:col-span-6 animate-fade-in justify-self-center items-end lg:justify-self-start w-80 h-80">
+    <section id="work" className="fade-in grid grid-cols-12">
+      <figure className="grid col-span-12 md:col-span-6 justify-self-center items-end lg:justify-self-start w-80 h-65">
         <Image
           src="/images/work.svg"
           alt="Illustration of a businesswoman"
@@ -23,9 +21,9 @@ const WorkExperience = () => {
           priority
         />
       </figure>
-      <div className="col-span-12 md:col-span-6 flex flex-col justify-end">
+      <div className="col-span-12 md:col-span-6 flex flex-col justify-end items-end">
         <span className="block font-handwritten text-6xl lowercase">work</span>
-        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+        <h2 className="text-6xl lg:text-8xl font-secondary uppercase">
           Experience
         </h2>
       </div>

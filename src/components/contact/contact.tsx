@@ -1,6 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-
 import ContactForm from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <section id="contact" className="grid md:grid-cols-2 my-30">
+    <section id="contact" className="fade-in grid md:grid-cols-2">
       <section className="flex flex-col gap-3 justify-center items-center md:items-start text-center md:text-left">
         <div>
           <span className="block font-handwritten text-6xl lowercase">

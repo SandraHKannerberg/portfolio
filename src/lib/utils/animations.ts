@@ -1,16 +1,17 @@
 // Animations using GSAP
-
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 /**
  * Soft scroll when click on i link in the navbar
  * @param targetId section id
  * @param offset value in pixels, for example navbar hight
  */
-export const scrollToSection = (targetId: string, offset: number = 70) => {
+export const scrollToSection = (targetId: string, offset: number = 100) => {
   gsap.to(window, {
     duration: 1,
     scrollTo: {
@@ -53,6 +54,31 @@ export const fallingLettersAnimation = (target: Element): Promise<void> => {
         stagger: {
           each: 0.2,
           from: "random",
+        },
+      }
+    );
+  });
+};
+
+export const fadeInOnScroll = (selector: string) => {
+  const elements = gsap.utils.toArray<HTMLElement>(selector);
+
+  elements.forEach((el) => {
+    gsap.fromTo(
+      el,
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
         },
       }
     );

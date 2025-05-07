@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Metadata } from "next";
 
@@ -11,7 +12,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="grid grid-cols-1 gap-10 md:grid-cols-2 min-h-[60vh] my-20"
+      className="fade-in grid grid-cols-1 gap-10 md:grid-cols-2 my-20"
     >
       <div className="flex flex-col justify-end">
         <span className="block font-handwritten text-6xl lowercase">

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import ProjectsList from "@/components/projects/projects-list";
-import { Project } from "@/lib/interfaces";
+import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
 
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const Projects = () => {
-  const projectsData = data as Project[];
+  const projectsData = data as IProject[];
 
   return (
-    <section id="projects" className="grid grid-cols-1 md:grid-cols-12 my-30">
+    <section id="projects" className="fade-in grid grid-cols-1 md:grid-cols-12">
       <figure className="grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
         {/* TODO: add animation to this image */}
         <Image
