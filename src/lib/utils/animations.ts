@@ -60,6 +60,7 @@ export const fallingLettersAnimation = (target: Element): Promise<void> => {
   });
 };
 
+// Fade in sections content when scrolling
 export const fadeInOnScroll = (selector: string) => {
   const elements = gsap.utils.toArray<HTMLElement>(selector);
 
@@ -79,6 +80,39 @@ export const fadeInOnScroll = (selector: string) => {
           trigger: el,
           start: "top 70%",
           toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
+};
+
+// Drop one by one
+export const dropOneByOne = (selector: string) => {
+  const targets = gsap.utils.toArray<HTMLElement>(selector);
+
+  targets.forEach((container) => {
+    const items = container.querySelectorAll<HTMLElement>(".item-to-drop");
+
+    if (items.length === 0) return;
+
+    gsap.fromTo(
+      items,
+      {
+        opacity: 0,
+        y: -50,
+        scale: 0.9,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          once: true,
         },
       }
     );
