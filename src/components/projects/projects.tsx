@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 
-import ProjectsList from "@/components/projects/projects-list";
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
+import ProjectsTimeline from "./projects-timeline";
 
 export const metadata: Metadata = {
   title: "Portfolio - Projects",
@@ -17,11 +17,13 @@ const Projects = () => {
   const projectsData = data as IProject[];
 
   return (
-    <section id="projects" className="fade-in grid grid-cols-1 md:grid-cols-12">
+    <section
+      id="projects"
+      className="fade-in grid grid-cols-1 md:grid-cols-12 my-50"
+    >
       <figure className="grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
-        {/* TODO: add animation to this image */}
         <Image
-          src="/images/projects.svg"
+          src="/images/projects-illustration.svg"
           alt="Illustration of a woman and about me text"
           width={500}
           height={400}
@@ -37,7 +39,7 @@ const Projects = () => {
         </h2>
       </div>
 
-      <ProjectsList projects={projectsData} />
+      <ProjectsTimeline projects={projectsData} />
     </section>
   );
 };
