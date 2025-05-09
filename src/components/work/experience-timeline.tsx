@@ -8,7 +8,7 @@ import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import data from "../../../public/data/experience-data.json";
 import { IExperience } from "@/lib/interfaces";
 
-const Timeline = () => {
+const ExperienceTimeline = () => {
   const experienceData = data as IExperience[];
 
   return (
@@ -23,7 +23,7 @@ const Timeline = () => {
           iconStyle={{ background: "#ece3dc", color: "#303c31" }}
           icon={exp.isEducation ? <GraduationCap /> : <BriefcaseBusiness />}
         >
-          <h3 className="vertical-timeline-element-title font-semibold">
+          <h3 className="vertical-timeline-element-title font-semibold uppercase">
             {exp.title}
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
@@ -36,4 +36,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default ExperienceTimeline;
