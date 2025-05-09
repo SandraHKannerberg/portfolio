@@ -6,8 +6,9 @@ export interface ILink {
 export interface IProject {
   id: number;
   title: string;
+  date: string;
   img: string;
-  description: string;
+  desc: string;
   tech: string;
   links: ILink[];
 }
