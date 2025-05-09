@@ -1,12 +1,5 @@
 "use client";
 import React from "react";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Portfolio - About",
-  description:
-    "Learn more about Sandra Höst Kannerberg, a passionate web developer with a focus on creativity, user-friendly solutions, and continuous growth. Discover my journey and expertise!",
-};
 
 const About = () => {
   return (
@@ -21,18 +14,31 @@ const About = () => {
         <h2 className="text-8xl font-secondary uppercase">About me</h2>
       </div>
 
-      <section className="flex flex-col justify-end gap-10">
-        <ul>
-          <li className="uppercase font-semibold">Sandra Höst Kannerberg</li>
-          <li>Web developer</li>
+      <section className="flex flex-col justify-end gap-5">
+        <ul className="mb-10">
+          <li className="uppercase font-semibold text-2xl">
+            Sandra Höst Kannerberg
+          </li>
+          <li className="uppercase font-semibold mb-5">Web developer</li>
+          <li>3+ experience of development</li>
+          <li>15+ experience of customer service</li>
           <li>Based in Stockholm</li>
           <li>Open for work within Stockholm area or remote globally</li>
         </ul>
         <p>
           I am a fullstack web developer with a frontend heart – passionate
           about creating intuitive, responsive interfaces while ensuring solid
-          and scalable backend foundations. A true frontend addict who thrives
-          on pixel perfection and modern UI/UX design.
+          and scalable backend foundations.
+        </p>
+        <p>
+          With a strong background in customer service, I bring a deeply rooted
+          customer-centric mindset to every project. This experience has honed
+          my communication skills, sharpened my focus on accessibility, and
+          instilled in me the importance of intuitive user experiences.
+        </p>
+        <p>
+          A true frontend addict who thrives on pixel perfection and modern
+          UI/UX design, I build with the end user always in mind.
         </p>
       </section>
     </section>
