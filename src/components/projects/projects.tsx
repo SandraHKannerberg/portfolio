@@ -1,17 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { Metadata } from "next";
 
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
 import ProjectsTimeline from "./projects-timeline";
-
-export const metadata: Metadata = {
-  title: "Portfolio - Projects",
-  description:
-    "Explore a curated selection of projects created by Sandra Höst Kannerberg, see how I bring ideas to life through design and development.",
-};
 
 const Projects = () => {
   const projectsData = data as IProject[];

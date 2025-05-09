@@ -1,13 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Metadata } from "next";
 import ExperienceTimeline from "@/components/work/experience-timeline";
-
-export const metadata: Metadata = {
-  title: "Portfolio - Work",
-  description:
-    "Discover Sandra Höst Kannerberg's professional journey, including her work experience and educational background. Learn about the skills and expertise gained throughout her career.",
-};
 
 const WorkExperience = () => {
   return (

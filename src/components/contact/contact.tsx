@@ -1,13 +1,6 @@
 import React from "react";
-import { Metadata } from "next";
 import ContactForm from "@/components/contact/contact-form";
 import { Mail } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Portfolio - Contact",
-  description:
-    "Get in touch with Sandra Höst Kannerberg. Reach out for inquiries, feedback, or collaboration opportunities.",
-};
 
 const Contact = () => {
   return (

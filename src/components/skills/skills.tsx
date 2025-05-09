@@ -1,16 +1,9 @@
 import React from "react";
-import { Metadata } from "next";
 import Image from "next/image";
 import data from "../../../public/data/skills-data.json";
 import { ISkill } from "@/lib/interfaces";
 import { useGSAP } from "@gsap/react";
 import { dropOneByOne } from "@/lib/utils/animations";
-
-export const metadata: Metadata = {
-  title: "Portfolio - Skills",
-  description:
-    "Discover Sandra Höst Kannerberg's professional journey. Learn about the skills and expertise gained throughout her career.",
-};
 
 const Skills = () => {
   const skillsData = data as ISkill[];
