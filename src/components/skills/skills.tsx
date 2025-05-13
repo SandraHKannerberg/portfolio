@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import data from "../../../public/data/skills-data.json";
 import { ISkill } from "@/lib/interfaces";
 import { useGSAP } from "@gsap/react";
-import { dropOneByOne } from "@/lib/utils/animations";
+import { dropOneByOne, splitTextByLines } from "@/lib/utils/animations";
 
 const Skills = () => {
   const skillsData = data as ISkill[];
+  const animationWrapperRef = useRef(null);
 
-  useGSAP(() => {
-    dropOneByOne(".items-to-drop"); // aims to the parent-container who holds all the item-to-drop
-  }, []);
+  useGSAP(
+    () => {
+      splitTextByLines(".lines");
+      dropOneByOne(".item-to-drop");
+    },
+    { scope: animationWrapperRef }
+  );
 
   return (
-    <section id="skills" className="fade-in grid grid-cols-12 my-20">
+    <section
+      ref={animationWrapperRef}
+      id="skills"
+      className="fade-in grid grid-cols-12 my-20"
+    >
       <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10">
-        <span className="block font-handwritten text-6xl lowercase">
+        <span className="block font-handwritten text-6xl lowercase lines">
           my tech
         </span>
-        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase lines">
           Skills
         </h2>
       </div>
@@ -27,7 +36,7 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <figure
             key={index}
-            className="item-to-drop flex flex-col items-center m-4 sm:my-0 w-[3rem] md:w-[4rem] kompetens-icons"
+            className="item-to-drop flex flex-col items-center m-4 sm:my-0 w-[3rem] md:w-[4rem]"
           >
             <Image src={skill.src} alt={skill.alt} width={100} height={100} />
             <figcaption className="mt-2">{skill.name}</figcaption>

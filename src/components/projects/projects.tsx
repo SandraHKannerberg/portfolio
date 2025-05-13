@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
 import ProjectsTimeline from "./projects-timeline";
+import { useGSAP } from "@gsap/react";
+import { splitTextByLines } from "@/lib/utils/animations";
 
 const Projects = () => {
   const projectsData = data as IProject[];
+
+  const textAnimationRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      splitTextByLines(".lines");
+    },
+    { scope: textAnimationRef }
+  );
 
   return (
     <section
@@ -23,11 +34,14 @@ const Projects = () => {
           priority
         />
       </figure>
-      <div className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center">
-        <span className="block font-handwritten text-6xl lowercase">
+      <div
+        ref={textAnimationRef}
+        className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center split-heading"
+      >
+        <span className="block font-handwritten text-6xl lowercase lines">
           selected
         </span>
-        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase lines">
           Projects
         </h2>
       </div>
