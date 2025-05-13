@@ -15,9 +15,12 @@ import { fadeInOnScroll } from "@/lib/utils/animations";
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    fadeInOnScroll(".fade-in");
-  }, []);
+  useGSAP(
+    () => {
+      fadeInOnScroll(".fade-in");
+    },
+    { scope: containerRef }
+  );
 
   return (
     <>
