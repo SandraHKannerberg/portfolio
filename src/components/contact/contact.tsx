@@ -27,7 +27,7 @@ const Contact = () => {
         </Link>
       </section>
 
-      <section className="flex flex-col gap-3 justify-center items-center bg-foreground text-background shadow-lg rounded py-5 my-10 md:my-0">
+      <section className="fade-in flex flex-col gap-3 justify-center items-center bg-foreground text-background shadow-lg rounded py-5 my-10 md:my-0">
         <ContactForm />
       </section>
     </section>

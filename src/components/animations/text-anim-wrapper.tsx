@@ -67,6 +67,7 @@ export default function TextAnimWrapper({
           type: "lines",
           mask: "lines",
           linesClass: "line++",
+          autoSplit: true,
         });
 
         splitRef.current.push(split);
@@ -101,7 +102,7 @@ export default function TextAnimWrapper({
           ...animationProps,
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 75%",
+            start: "top 70%",
             toggleActions: "play none none reverse",
           },
         });
