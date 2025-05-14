@@ -17,9 +17,7 @@ const WorkExperience = () => {
       </figure>
       <div className="col-span-12 md:col-span-6 flex flex-col justify-end items-end">
         <TextAnimWrapper>
-          <span className="block font-handwritten text-6xl lowercase">
-            work
-          </span>
+          <p className="block font-handwritten text-6xl lowercase">work</p>
           <h2 className="text-6xl lg:text-8xl font-secondary uppercase">
             Experience
           </h2>

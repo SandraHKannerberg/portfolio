@@ -12,9 +12,9 @@ const About = () => {
       >
         <div className="flex flex-col justify-end">
           <TextAnimWrapper>
-            <span className="block font-handwritten text-6xl lowercase">
+            <p className="block font-handwritten text-6xl lowercase">
               a little
-            </span>
+            </p>
             <h2 id="main-heading" className="text-8xl font-secondary uppercase">
               About me
             </h2>

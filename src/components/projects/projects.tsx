@@ -23,9 +23,7 @@ const Projects = () => {
       </figure>
       <div className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center">
         <TextAnimWrapper>
-          <span className="block font-handwritten text-6xl lowercase">
-            selected
-          </span>
+          <p className="block font-handwritten text-6xl lowercase">selected</p>
           <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
             Projects
           </h2>

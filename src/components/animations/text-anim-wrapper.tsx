@@ -4,6 +4,7 @@ import React, {
   cloneElement,
   isValidElement,
   useRef,
+  JSX,
 } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -115,9 +116,18 @@ export default function TextAnimWrapper({
     }
   );
 
-  // If children = 1 element set ref to that element
-  if (React.Children.count(children) === 1 && isValidElement(children)) {
-    const child = children as ReactElement<any, any>;
+  const isSingleHtmlElement =
+    React.Children.count(children) === 1 &&
+    isValidElement(children) &&
+    typeof children.type === "string";
+
+  if (isSingleHtmlElement) {
+    type HtmlTag = keyof JSX.IntrinsicElements;
+
+    const child = children as ReactElement<
+      JSX.IntrinsicElements[HtmlTag],
+      HtmlTag
+    >;
 
     return cloneElement(child, {
       ref: containerRef,
