@@ -1,27 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import { Metadata } from "next";
 
-import ProjectsList from "@/components/projects/projects-list";
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
-
-export const metadata: Metadata = {
-  title: "Portfolio - Projects",
-  description:
-    "Explore a curated selection of projects created by Sandra Höst Kannerberg, see how I bring ideas to life through design and development.",
-};
+import ProjectsTimeline from "./projects-timeline";
+import TextAnimWrapper from "../animations/text-anim-wrapper";
 
 const Projects = () => {
   const projectsData = data as IProject[];
 
   return (
-    <section id="projects" className="fade-in grid grid-cols-1 md:grid-cols-12">
-      <figure className="grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
-        {/* TODO: add animation to this image */}
+    <section id="projects" className="grid grid-cols-1 md:grid-cols-12 my-50">
+      <figure className="fade-in grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
         <Image
-          src="/images/projects.svg"
+          src="/images/projects-illustration.svg"
           alt="Illustration of a woman and about me text"
           width={500}
           height={400}
@@ -29,15 +22,15 @@ const Projects = () => {
         />
       </figure>
       <div className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center">
-        <span className="block font-handwritten text-6xl lowercase">
-          selected
-        </span>
-        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
-          Projects
-        </h2>
+        <TextAnimWrapper>
+          <p className="block font-handwritten text-6xl lowercase">selected</p>
+          <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+            Projects
+          </h2>
+        </TextAnimWrapper>
       </div>
-
-      <ProjectsList projects={projectsData} />
+      <h3 className="pb-5 text-lg uppercase sr-only">Projects timeline</h3>
+      <ProjectsTimeline projects={projectsData} />
     </section>
   );
 };

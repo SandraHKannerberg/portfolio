@@ -9,7 +9,7 @@ export type FormData = {
   message: string;
 };
 
-export default function ContactForm() {
+const ContactForm = () => {
   const {
     register,
     handleSubmit,
@@ -80,4 +80,6 @@ export default function ContactForm() {
       </button>
     </form>
   );
-}
+};
+
+export default ContactForm;

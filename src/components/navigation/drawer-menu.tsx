@@ -22,7 +22,7 @@ const DrawerMenu = () => {
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
       <DrawerTrigger aria-label="Menu" className="w-full flex justify-end">
-        <AlignJustify></AlignJustify>
+        <AlignJustify />
       </DrawerTrigger>
 
       <DrawerContent

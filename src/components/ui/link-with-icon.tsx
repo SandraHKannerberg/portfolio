@@ -9,13 +9,13 @@ type LinkWithIconProps = ILink & {
   newTab?: boolean;
 };
 
-export default function LinkWithIcon({
+const LinkWithIcon = ({
   label,
   url,
   icon,
   className = "",
   newTab = false,
-}: LinkWithIconProps) {
+}: LinkWithIconProps) => {
   return (
     <Link
       href={url}
@@ -27,4 +27,6 @@ export default function LinkWithIcon({
       {icon || <ArrowUpRight />}
     </Link>
   );
-}
+};
+
+export default LinkWithIcon;

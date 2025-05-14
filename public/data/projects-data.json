@@ -1,34 +1,23 @@
 [
   {
-    "id": 1,
-    "title": "Design Implementation",
-    "description": "Showcase my ability to implement advanced CSS, semantic HTML, and follow accessibility best practices based on a given mock-up.",
-    "img": "/images/project-images/planthood.png",
-    "tech": "HTML and CSS",
+    "id": 6,
+    "title": "Portfolio",
+    "date": "Feb 2025 - ongoing",
+    "desc": "A modern and responsive portfolio built with Next.js, TypeScript, Tailwind CSS, Shadcn/ui and GSAP. This project showcases my skills, projects and experience in web development with a focus on performance, accessibility, SEO and clean design - achieving a high Lighthouse score",
+    "img": "/images/project-images/portfolio.png",
+    "tech": "NextJs, TypeScript, Tailwind CSS, Shadcn/ui, GSAP",
     "links": [
       {
         "label": "GitHub",
-        "url": "https://github.com/SandraHKannerberg/planned-planthood"
+        "url": "https://github.com/SandraHKannerberg/portfolio"
       }
     ]
   },
   {
-    "id": 2,
-    "title": "Bucket list",
-    "description": "A responsive bucket list app using HTML, CSS, JavaScript and localStorage. The project demonstrating my ability to create dynamic functionality and manage persistent data.",
-    "img": "/images/project-images/bucketlist.png",
-    "tech": "HTML, CSS and JavaScript",
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/SandraHKannerberg/bucketlist"
-      }
-    ]
-  },
-  {
-    "id": 3,
+    "id": 5,
     "title": "CRUD-app",
-    "description": "A CRUD app for managing an artist collection, built with HTML, CSS and JavaScript. I'm fetching data from an external API to demonstrate my skills in handling dynamic data and interactive functionality.",
+    "date": "Jan 2025",
+    "desc": "A CRUD app for managing an artist collection, built with HTML, CSS and JavaScript. I'm fetching data from an external API to demonstrate my skills in handling dynamic data and interactive functionality.",
     "img": "/images/project-images/crud.png",
     "tech": "HTML, CSS, JavaScript and API integration",
     "links": [
@@ -40,25 +29,37 @@
   },
   {
     "id": 4,
-    "title": "Weather App",
-    "description": "This project highlights my ability to build dynamic web applications using React, TypeScript, and Bootstrap, while integrating data from a weather API to display real-time weather information.",
-    "img": "/images/project-images/weather.png",
-    "tech": "React, TypeScript, Bootstrap",
+    "title": "Bucket list",
+    "date": "Jan 2025",
+    "desc": "A responsive bucket list app using HTML, CSS, JavaScript and localStorage. The project demonstrating my ability to create dynamic functionality and manage persistent data.",
+    "img": "/images/project-images/bucketlist.png",
+    "tech": "HTML, CSS and JavaScript",
     "links": [
       {
         "label": "GitHub",
-        "url": "https://github.com/SandraHKannerberg/weather-app"
-      },
-      {
-        "label": "Demo",
-        "url": "https://sandra-weather-app.onrender.com/"
+        "url": "https://github.com/SandraHKannerberg/bucketlist"
       }
     ]
   },
   {
-    "id": 5,
+    "id": 3,
+    "title": "Design Implementation",
+    "date": "Dec 2024",
+    "desc": "Showcase my ability to implement advanced CSS, semantic HTML, and follow accessibility best practices based on a given mock-up.",
+    "img": "/images/project-images/planthood.png",
+    "tech": "HTML and CSS",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/SandraHKannerberg/planned-planthood"
+      }
+    ]
+  },
+  {
+    "id": 2,
     "title": "Fullstack e-commerce",
-    "description": "A complete e-commerce platform built with MERN-stack, showcasing my ability to develop both frontend and backend solutions. The project includes database management, user authentication, payment integration and CRUD-operations.",
+    "date": "Dec 2023 - ongoing",
+    "desc": "A complete e-commerce platform built with MERN-stack, showcasing my ability to develop both frontend and backend solutions. The project includes database management, user authentication, payment integration and CRUD-operations.",
     "img": "/images/project-images/ecommerce.png",
     "tech": "MERN-stack (MongoDB, Express, React, Node.js), TypeScript, Bootstrap and Stripe integration.",
     "links": [
@@ -70,19 +71,20 @@
     ]
   },
   {
-    "id": 6,
-    "title": "My Portfolio",
-    "description": "A modern and responsive portfolio built with Next.js, TypeScript, Tailwind CSS, Shadcn/ui and Framer Motion. This project showcases my skills, projects and experience in web development with a focus on performance, accessibility, SEO and clean design - achieving a high Lighthouse score",
-    "img": "/images/project-images/portfolio.png",
-    "tech": "NextJs, TypeScript, Tailwind CSS, Shadcn/ui, Framer Motion",
+    "id": 1,
+    "title": "Weather App",
+    "date": "Nov 2023",
+    "desc": "This project highlights my ability to build dynamic web applications using React, TypeScript, and Bootstrap, while integrating data from a weather API to display real-time weather information.",
+    "img": "/images/project-images/weather.png",
+    "tech": "React, TypeScript, Bootstrap",
     "links": [
       {
         "label": "GitHub",
-        "url": "https://github.com/SandraHKannerberg/portfolio"
+        "url": "https://github.com/SandraHKannerberg/weather-app"
       },
       {
         "label": "Demo",
-        "url": "https://sandra-dev-portfolio.vercel.app"
+        "url": "https://sandra-weather-app.onrender.com/"
       }
     ]
   }
