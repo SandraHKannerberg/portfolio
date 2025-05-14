@@ -1,31 +1,18 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
 import ProjectsTimeline from "./projects-timeline";
-import { useGSAP } from "@gsap/react";
-import { splitTextByLines } from "@/lib/utils/animations";
+import TextAnimWrapper from "../animations/text-anim-wrapper";
 
 const Projects = () => {
   const projectsData = data as IProject[];
 
-  const textAnimationRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      splitTextByLines(".lines");
-    },
-    { scope: textAnimationRef }
-  );
-
   return (
-    <section
-      id="projects"
-      className="fade-in grid grid-cols-1 md:grid-cols-12 my-50"
-    >
-      <figure className="grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
+    <section id="projects" className="grid grid-cols-1 md:grid-cols-12 my-50">
+      <figure className="fade-in grid col-span-12 sm:col-span-6 animate-fade-in justify-self-center lg:justify-self-start h-80 w-90 sm:w-100">
         <Image
           src="/images/projects-illustration.svg"
           alt="Illustration of a woman and about me text"
@@ -34,18 +21,17 @@ const Projects = () => {
           priority
         />
       </figure>
-      <div
-        ref={textAnimationRef}
-        className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center split-heading"
-      >
-        <span className="block font-handwritten text-6xl lowercase lines">
-          selected
-        </span>
-        <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase lines">
-          Projects
-        </h2>
+      <div className="col-span-12 sm:col-span-6 flex flex-col items-end justify-center">
+        <TextAnimWrapper>
+          <span className="block font-handwritten text-6xl lowercase">
+            selected
+          </span>
+          <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+            Projects
+          </h2>
+        </TextAnimWrapper>
       </div>
-
+      <h3 className="pb-5 text-lg uppercase sr-only">Projects timeline</h3>
       <ProjectsTimeline projects={projectsData} />
     </section>
   );

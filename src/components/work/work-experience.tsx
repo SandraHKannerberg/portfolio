@@ -1,22 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import ExperienceTimeline from "@/components/work/experience-timeline";
-import { useGSAP } from "@gsap/react";
-import { splitTextByLines } from "@/lib/utils/animations";
+import TextAnimWrapper from "../animations/text-anim-wrapper";
 
 const WorkExperience = () => {
-  const textAnimationRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      splitTextByLines(".lines");
-    },
-    { scope: textAnimationRef }
-  );
-
   return (
-    <section id="work" className="fade-in grid grid-cols-12">
-      <figure className="grid col-span-12 md:col-span-6 justify-self-center items-end lg:justify-self-start w-80 h-65">
+    <section id="work" className="grid grid-cols-12">
+      <figure className="fade-in grid col-span-12 md:col-span-6 justify-self-center items-end lg:justify-self-start w-80 h-65">
         <Image
           src="/images/work.svg"
           alt="Illustration of a businesswoman"
@@ -25,16 +15,15 @@ const WorkExperience = () => {
           priority
         />
       </figure>
-      <div
-        ref={textAnimationRef}
-        className="col-span-12 md:col-span-6 flex flex-col justify-end items-end"
-      >
-        <span className="block font-handwritten text-6xl lowercase lines">
-          work
-        </span>
-        <h2 className="text-6xl lg:text-8xl font-secondary uppercase lines">
-          Experience
-        </h2>
+      <div className="col-span-12 md:col-span-6 flex flex-col justify-end items-end">
+        <TextAnimWrapper>
+          <span className="block font-handwritten text-6xl lowercase">
+            work
+          </span>
+          <h2 className="text-6xl lg:text-8xl font-secondary uppercase">
+            Experience
+          </h2>
+        </TextAnimWrapper>
       </div>
 
       {/* Timeline */}

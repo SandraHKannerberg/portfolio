@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full p-5">
+    <form onSubmit={handleSubmit(onSubmit)} className="fade-in w-full p-5">
       {/* Name */}
       {errors.name && (
         <p className="text-red-500 text-sm mt-2">{errors.name.message}</p>
