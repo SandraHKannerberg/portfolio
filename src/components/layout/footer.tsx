@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import ContactLinks from "../contact/contact-links";
+import ContactBtn from "../contact/contact-btn";
 
 const Footer = () => {
   return (
@@ -9,14 +8,7 @@ const Footer = () => {
       <section className="flex justify-between items-start">
         <div className="flex flex-col gap-3">
           <h2 className="font-secondary text-5xl">sandra.</h2>
-          <Link href="mailto:sandra.hkannerberg@gmail.com">
-            <Button
-              variant="outline"
-              className="rounded-full p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background"
-            >
-              Get in touch
-            </Button>
-          </Link>
+          <ContactBtn text="Get in touch" />
         </div>
         <ContactLinks />
       </section>

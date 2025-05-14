@@ -15,12 +15,12 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-type SplitTextInstance = {
+interface SplitTextInstance {
   lines: Element[];
   words: Element[];
   chars: Element[];
   revert: () => void;
-};
+}
 
 interface TextAnimWrapperProps {
   children: React.ReactNode;
@@ -64,6 +64,7 @@ export default function TextAnimWrapper({
       elements.forEach((element) => {
         elementRef.current.push(element);
 
+        // Create the SplitText object
         const split = SplitText.create(element, {
           type: "lines",
           mask: "lines",
@@ -71,6 +72,7 @@ export default function TextAnimWrapper({
           autoSplit: true, // Important for responsive design
         });
 
+        // Add split obj to the splitRef array
         splitRef.current.push(split);
 
         const linesAsHTMLElements = toHTMLElementArray(split.lines);
@@ -80,6 +82,7 @@ export default function TextAnimWrapper({
       // Staring position
       gsap.set(lines.current, { y: "100%" });
 
+      // Animation settings
       const animationProps = {
         y: "0%",
         duration: 1,
@@ -88,6 +91,7 @@ export default function TextAnimWrapper({
         delay: delay,
       };
 
+      // Scroll-trigger config
       if (animateOnScroll) {
         gsap.to(lines.current, {
           ...animationProps,
@@ -116,6 +120,8 @@ export default function TextAnimWrapper({
     }
   );
 
+  // Important to safe and correct set ref-attribute to a child, BUT just if it is a HTML-element! Can't be a string for example
+  // If children = 1 element -> set ref to the that element
   const isSingleHtmlElement =
     React.Children.count(children) === 1 &&
     isValidElement(children) &&
