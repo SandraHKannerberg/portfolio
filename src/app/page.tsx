@@ -11,6 +11,7 @@ import Contact from "@/components/contact/contact";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { fadeInOnScroll } from "@/lib/utils/animations";
+import { ReactLenis } from "lenis/react";
 
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -24,19 +25,21 @@ export default function HomePage() {
 
   return (
     <>
-      <MaxWidthWrapper>
-        <Hero />
-        <ScrollDown />
+      <ReactLenis root>
+        <MaxWidthWrapper>
+          <Hero />
+          <ScrollDown />
 
-        <main ref={containerRef} className="space-y-40">
-          <About />
-          <CvDownload />
-          <Work />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-      </MaxWidthWrapper>
+          <main ref={containerRef} className="space-y-40">
+            <About />
+            <CvDownload />
+            <Work />
+            <Skills />
+            <Projects />
+            <Contact />
+          </main>
+        </MaxWidthWrapper>
+      </ReactLenis>
     </>
   );
 }
