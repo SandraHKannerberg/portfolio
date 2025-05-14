@@ -2,13 +2,16 @@
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
+// gsap plugins
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
 
 /**
  * Soft scroll when click on i link in the navbar
- * @param targetId section id
+ * @param targetId = section id
  * @param offset value in pixels, for example navbar hight
  */
 export const scrollToSection = (targetId: string, offset: number = 100) => {
@@ -88,33 +91,19 @@ export const fadeInOnScroll = (selector: string) => {
 
 // Drop one by one
 export const dropOneByOne = (selector: string) => {
-  const targets = gsap.utils.toArray<HTMLElement>(selector);
-
-  targets.forEach((container) => {
-    const items = container.querySelectorAll<HTMLElement>(".item-to-drop");
-
-    if (items.length === 0) return;
-
-    gsap.fromTo(
-      items,
-      {
-        opacity: 0,
-        y: -50,
-        scale: 0.9,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: container,
-          start: "top 80%",
-          once: true,
-        },
-      }
-    );
+  gsap.from(selector, {
+    scale: 0,
+    duration: 1,
+    repeat: 0,
+    ease: "power2.inOut",
+    yoyo: true,
+    stagger: {
+      each: 0.2,
+    },
+    scrollTrigger: {
+      trigger: selector,
+      start: "bottom 80%",
+      toggleActions: "play none none reverse",
+    },
   });
 };

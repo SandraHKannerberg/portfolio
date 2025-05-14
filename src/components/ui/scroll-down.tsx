@@ -24,7 +24,7 @@ const ScrollDown = ({ className }: { className?: string }) => {
         </Button>
       </Link>
       <RotatingTextCircle
-        text="Scroll down -- Explore my portfolio -- Scroll down"
+        text="Scroll down ---- Explore my portfolio ---- Scroll down --"
         width="150"
         height="150"
       />

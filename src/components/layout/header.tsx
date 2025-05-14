@@ -7,7 +7,7 @@ import DrawerMenu from "../navigation/drawer-menu";
 const Header = () => {
   const isMobile = useIsMobile();
   return (
-    <header className="sticky top-0 px-5 bg-background/75 z-[100] backdrop-blur-lg transition-all shadow-sm flex justify-between items-center m-auto">
+    <header className="sticky top-0 px-5 py-3 bg-background/75 z-[100] backdrop-blur-lg transition-all shadow-sm flex justify-between items-center m-auto">
       <Link href="/">
         <h2 className="font-secondary text-5xl">sandra.</h2>
       </Link>
