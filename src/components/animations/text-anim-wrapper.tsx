@@ -67,22 +67,12 @@ export default function TextAnimWrapper({
           type: "lines",
           mask: "lines",
           linesClass: "line++",
-          autoSplit: true,
+          autoSplit: true, // Important for responsive design
         });
 
         splitRef.current.push(split);
 
-        const computedStyle = window.getComputedStyle(element);
-        const textIndent = computedStyle.textIndent;
-
         const linesAsHTMLElements = toHTMLElementArray(split.lines);
-
-        if (textIndent === "0px") {
-          if (linesAsHTMLElements.length > 0) {
-            linesAsHTMLElements[0].style.paddingLeft = textIndent;
-          }
-          element.style.textIndent = "0";
-        }
 
         lines.current.push(...linesAsHTMLElements);
       });
