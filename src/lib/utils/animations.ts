@@ -107,15 +107,3 @@ export const dropOneByOne = (selector: string) => {
     },
   });
 };
-
-export const splitTextByLines = (selector: string) => {
-  const split = new SplitText(selector, { type: "lines" });
-  gsap.from(split.lines, {
-    rotationX: -100,
-    transformOrigin: "50% 50% -160px",
-    opacity: 0,
-    duration: 1,
-    ease: "power3",
-    stagger: 0.25,
-  });
-};
