@@ -8,16 +8,18 @@ const Contact = () => {
     <section id="contact" className="grid md:grid-cols-2 gap-[10rem]">
       <section className="flex flex-col gap-3 justify-center items-center md:items-start md:text-left col-span-2">
         <TextAnimWrapper>
-          <p className="block font-handwritten text-6xl lg:text-[8rem] lowercase px-5">
-            let&apos;s
-          </p>
-          <h2 className="text-7xl lg:text-[10rem] mb-5 font-secondary uppercase">
-            Get in touch
-          </h2>
+          <div className="flex flex-col mx-auto">
+            <p className="block font-handwritten text-6xl lg:text-[8rem] lowercase px-5">
+              let&apos;s
+            </p>
+            <h2 className="text-7xl lg:text-[10rem] mb-5 font-secondary uppercase">
+              Get in touch
+            </h2>
+          </div>
         </TextAnimWrapper>
 
         <TextAnimWrapper>
-          <p className="indent-12">
+          <p className="indent-8">
             Ready to built amazing things together? Reaching out to offer a new
             opportunity? Just want to say Hello? Feel free to fill out the form
             or send me an e-mail—let's connect today!

@@ -19,14 +19,14 @@ const Skills = () => {
 
   return (
     <section id="skills" className="grid grid-cols-12 my-20">
-      <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10">
-        <TextAnimWrapper>
-          <p className="block font-handwritten text-6xl lowercase">my tech</p>
-          <h2 className="text-6xl lg:text-8xl mb-5 font-secondary uppercase">
+      <TextAnimWrapper>
+        <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10 overflow-visible">
+          <p className="block font-handwritten text-6xl lowercase">tech</p>
+          <h2 className="text-6xl lg:text-[10rem] mb-5 font-secondary uppercase text-foreground">
             Skills
           </h2>
-        </TextAnimWrapper>
-      </div>
+        </div>
+      </TextAnimWrapper>
 
       <section
         ref={containerRef}
