@@ -15,20 +15,17 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-interface SplitTextInstance {
-  lines: Element[];
-  words: Element[];
-  chars: Element[];
-  revert: () => void;
-}
-
 interface TextAnimWrapperProps {
   children: React.ReactNode;
   animateOnScroll?: boolean;
   delay?: number;
 }
 
-const toHTMLElementArray = (els: Element[]): HTMLElement[] =>
+// els: Element[] = It is an array of DOM elements of type Element - which is the general base class for all HTML/SVG/XML elements in the DOM.
+// el is HTMLElement = This is a type predicate - it tells TypeScript that after filtering, el will be an HTMLElement, not just a generic Element.
+// el instanceof HTMLElement = The runtime check - "Is this element a real HTML element?"
+// Now TypeScript now knows that htmlElementsArray = HTMLElement[]
+const htmlElementsArray = (els: Element[]): HTMLElement[] =>
   els.filter((el): el is HTMLElement => el instanceof HTMLElement);
 
 export default function TextAnimWrapper({
@@ -37,48 +34,41 @@ export default function TextAnimWrapper({
   delay = 0,
 }: TextAnimWrapperProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const elementRef = useRef<HTMLElement[]>([]);
-  const splitRef = useRef<SplitTextInstance[]>([]);
+  const splitRef = useRef<SplitText[]>([]);
   const lines = useRef<HTMLElement[]>([]);
 
   useGSAP(
     () => {
       if (!containerRef.current) return;
 
+      // Reset
       splitRef.current = [];
-      elementRef.current = [];
       lines.current = [];
 
-      let elements: HTMLElement[] = [];
+      const isWrapper = containerRef.current.hasAttribute("data-copy-wrapper");
 
-      if (containerRef.current) {
-        if (containerRef.current.hasAttribute("data-copy-wrapper")) {
-          elements = Array.from(containerRef.current.children).filter(
+      // Target all direct children
+      const elements = isWrapper
+        ? Array.from(containerRef.current.children).filter(
             (el): el is HTMLElement => el instanceof HTMLElement
-          );
-        } else {
-          elements = [containerRef.current];
-        }
-      }
+          )
+        : [containerRef.current];
 
-      elements.forEach((element) => {
-        elementRef.current.push(element);
-
-        // Create the SplitText object
-        const split = SplitText.create(element, {
+      // SplitText setup
+      splitRef.current = elements.map((element) =>
+        SplitText.create(element, {
           type: "lines",
-          mask: "lines",
+          mask: "lines", // Create a visual ‘mask’ that hides the content until it is animated
           linesClass: "line++",
           autoSplit: true, // Important for responsive design
-        });
+        })
+      );
 
-        // Add split obj to the splitRef array
-        splitRef.current.push(split);
+      // Collect every lines in an array
+      lines.current = splitRef.current.flatMap((split) =>
+        htmlElementsArray(split.lines)
+      );
 
-        const linesAsHTMLElements = toHTMLElementArray(split.lines);
-
-        lines.current.push(...linesAsHTMLElements);
-      });
       // Staring position
       gsap.set(lines.current, { y: "100%" });
 
@@ -120,8 +110,7 @@ export default function TextAnimWrapper({
     }
   );
 
-  // Important to safe and correct set ref-attribute to a child, BUT just if it is a HTML-element! Can't be a string for example
-  // If children = 1 element -> set ref to the that element
+  // Detect if children = exactly 1 element AND ensure it is a HTML-element. Can't be a React-component, React-fragment or a string since they can't handle the ref-attribute
   const isSingleHtmlElement =
     React.Children.count(children) === 1 &&
     isValidElement(children) &&
@@ -142,7 +131,11 @@ export default function TextAnimWrapper({
 
   // If children = more than 1 element -> wrap them in i div and set ref to the div-element
   return (
-    <div ref={containerRef} data-copy-wrapper="true">
+    <div
+      ref={containerRef}
+      data-copy-wrapper="true"
+      className="overflow-visible w-full"
+    >
       {children}
     </div>
   );
