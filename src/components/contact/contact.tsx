@@ -49,7 +49,7 @@ const Contact = () => {
           <p className="indent-10">
             Ready to built amazing things together? Reaching out to offer a new
             opportunity? Just want to say Hello? Feel free to fill out the form
-            or send me an e-mail—let's connect today!
+            or send me an e-mail—let&apos;s connect today!
           </p>
         </TextAnimWrapper>
 
