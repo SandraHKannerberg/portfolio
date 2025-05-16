@@ -107,3 +107,26 @@ export const dropOneByOne = (selector: string) => {
     },
   });
 };
+
+// Parallax effect on scroll
+export const parallaxScroll = (
+  parallaxItemRef: HTMLElement,
+  textRef: HTMLElement,
+  parallaxContainerRef: HTMLElement
+) => {
+  // Parallax scroll for form
+  gsap.to(parallaxItemRef, {
+    y: () => {
+      // Dynamic value - scroll upp to this ref - then stop
+      const textBox = textRef?.getBoundingClientRect().height || 0;
+      return -textBox;
+    },
+    ease: "none",
+    scrollTrigger: {
+      trigger: parallaxContainerRef,
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+};

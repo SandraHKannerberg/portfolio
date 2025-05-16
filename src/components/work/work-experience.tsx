@@ -1,24 +1,16 @@
 import React from "react";
-import Image from "next/image";
 import ExperienceTimeline from "@/components/work/experience-timeline";
 import TextAnimWrapper from "../animations/text-anim-wrapper";
 
 const WorkExperience = () => {
   return (
     <section id="work" className="grid grid-cols-12">
-      <figure className="fade-in grid col-span-12 md:col-span-6 justify-self-center items-end lg:justify-self-start w-80 h-65">
-        <Image
-          src="/images/work.svg"
-          alt="Illustration of a businesswoman"
-          width={400}
-          height={400}
-          priority
-        />
-      </figure>
-      <div className="col-span-12 md:col-span-6 flex flex-col justify-end items-end">
+      <div className="col-span-12 flex flex-col justify-end items-end">
         <TextAnimWrapper>
-          <p className="block font-handwritten text-6xl lowercase">work</p>
-          <h2 className="text-6xl lg:text-8xl font-secondary uppercase">
+          <p className="block font-handwritten text-6xl lowercase indent-10">
+            work
+          </p>
+          <h2 className="text-6xl lg:text-9xl font-secondary uppercase">
             Experience
           </h2>
         </TextAnimWrapper>

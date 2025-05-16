@@ -3,7 +3,7 @@
     "companyOrSchool": "Mojjo AB",
     "title": "Frontend Developer, Intern",
     "date": "Apr 2025 - ongoing",
-    "desc": "Contribute as a Frontend Developer to the project Boost By Mojjo, collaborating closely with the team from the planning phase to build a new platform for startups.",
+    "desc": "Contribute as a Frontend Developer to the project Boost By Mojjo. Collaborating closely with the team in an agile workflow, from the planning phase to building a new, innovative and inspiring platform for startups.",
     "isEducation": false
   },
   {
@@ -24,28 +24,28 @@
     "companyOrSchool": "Medieinstitutet",
     "title": "Web Developer, e-commerce",
     "date": "Sep 2022 - May 2024",
-    "desc": "Completed fullstack development training covering both frontend and backend technologies.",
+    "desc": "Higher Vocational Education Diploma - Completed fullstack development training covering both modern frontend and backend technologies.",
     "isEducation": true
   },
   {
     "companyOrSchool": "Byggdagboken",
     "title": "Fullstack Developer, Intern",
     "date": "Sep 2023 - Dec 2023",
-    "desc": "Together in a team I contribute to build a login page to facilitate the user experience.",
+    "desc": "As part of a team I contribute to build a login page to facilitate the user experience.",
     "isEducation": false
   },
   {
     "companyOrSchool": "SEB / SEB Kort",
     "title": "Customer Service Advisor",
     "date": "Sep 2009 - May 2025",
-    "desc": "From customer support, I bring a deep understanding of user needs, clear communication and a commitment to creating intuitive, helpful digital experiences.",
+    "desc": "After 15 years in different customer service advisor roles, I have a deep understanding of user needs, clear communication and a commitment to creating intuitive, helpful digital experiences.",
     "isEducation": false
   },
   {
-    "companyOrSchool": "Nackademin",
+    "companyOrSchool": "Nackademin Yrkeshögskola",
     "title": "Business IT",
     "date": "Aug 2007 - Jun 2009",
-    "desc": "Marketing background fueled my eye for color, layout and crafting visually engaging user experiences.",
+    "desc": "Higher Vocational Education Diploma - Economics and Marketing.",
     "isEducation": true
   }
 ]
