@@ -27,7 +27,7 @@ const Projects = () => {
           <p className="block font-handwritten text-6xl lowercase indent-10">
             selected
           </p>
-          <h2 className="text-6xl lg:text-[10rem] mb-5 font-secondary uppercase">
+          <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase">
             Projects
           </h2>
         </TextAnimWrapper>

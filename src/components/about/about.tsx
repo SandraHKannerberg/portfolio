@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 import TextAnimWrapper from "../animations/text-anim-wrapper";
 
 const About = () => {
@@ -17,7 +17,7 @@ const About = () => {
               </p>
               <h2
                 id="main-heading"
-                className="text-8xl lg:text-[10rem] font-secondary uppercase"
+                className="text-8xl lg:text-9xl font-secondary uppercase"
               >
                 About me
               </h2>
@@ -34,6 +34,7 @@ const About = () => {
               communication skills, sharpened my focus on accessibility, and
               instilled in me the importance of intuitive user experiences.
             </p>
+
             <p className="text-xl">
               My fullstack development and design passion allows me to build
               projects from the ground up, transforming ideas into powerful and

@@ -10,7 +10,7 @@ const WorkExperience = () => {
           <p className="block font-handwritten text-6xl lowercase indent-10">
             work
           </p>
-          <h2 className="text-6xl lg:text-[10rem] font-secondary uppercase">
+          <h2 className="text-6xl lg:text-9xl font-secondary uppercase">
             Experience
           </h2>
         </TextAnimWrapper>

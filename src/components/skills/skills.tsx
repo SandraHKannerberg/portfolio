@@ -21,10 +21,10 @@ const Skills = () => {
     <section id="skills" className="grid grid-cols-12 my-20">
       <div className="col-span-12 md:col-span-6 flex flex-col justify-end mb-10 overflow-visible">
         <TextAnimWrapper>
-          <p className="block font-handwritten text-6xl lowercase indent-10">
-            tech
+          <p className="block font-handwritten text-6xl lowercase indent-10 leading-loose">
+            my tech
           </p>
-          <h2 className="text-6xl lg:text-[10rem] mb-5 font-secondary uppercase text-foreground">
+          <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase text-foreground">
             Skills
           </h2>
         </TextAnimWrapper>

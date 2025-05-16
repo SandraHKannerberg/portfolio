@@ -62,9 +62,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-@layer utilities {
-  .line {
-    padding-inline: 10px;
-  }
-}
