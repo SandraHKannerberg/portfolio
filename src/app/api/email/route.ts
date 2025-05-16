@@ -3,39 +3,49 @@ import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json();
+  try {
+    const { email, name, message } = await request.json();
 
-  const transport = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.MY_EMAIL,
-      pass: process.env.MY_PASSWORD,
-    },
-  });
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { status: "error", message: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
-  const mailOptions: Mail.Options = {
-    from: process.env.MY_EMAIL,
-    to: process.env.MY_EMAIL,
-    cc: email, //Copy to sender
-    subject: `Message from ${name} (${email})`,
-    text: message,
-  };
-
-  const sendMailPromise = () =>
-    new Promise<string>((resolve, reject) => {
-      transport.sendMail(mailOptions, function (err) {
-        if (!err) {
-          resolve("Your message has been sent");
-        } else {
-          reject(err.message);
-        }
-      });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.MY_EMAIL,
+        pass: process.env.MY_PASSWORD,
+      },
     });
 
-  try {
-    await sendMailPromise();
-    return NextResponse.json({ message: "Your message has been sent" });
+    // Mail to you from the contactform
+    const mailOptions: Mail.Options = {
+      from: process.env.MY_EMAIL,
+      to: process.env.MY_EMAIL,
+      subject: `Message from ${name} (${email})`,
+      text: message,
+    };
+
+    // Send the mail
+    const info = await transporter.sendMail(mailOptions);
+
+    // Auto-reply to confirm: "Thank you for your message" - mail
+    await transporter.sendMail({
+      from: process.env.MY_EMAIL,
+      to: email,
+      subject: "Thank you for your message!",
+      text: `Hello ${name},\n\nThank you for your message. I usually reply within 1-2 days. Have a nice day!\n\nBest Regards,\nSandra Höst Kannerberg\nCreative coder\nsandra.hkannerberg@gmail.com`,
+    });
+
+    return NextResponse.json({ status: "success", messageId: info.messageId });
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    console.error("Error sending email:", err);
+    return NextResponse.json(
+      { status: "error", message: "Something went wrong, message not sent" },
+      { status: 500 }
+    );
   }
 }

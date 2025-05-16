@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${alice.variable} ${anticDidone.variable} ${mrDeHaviland.variable} antialiased leading-7 font-primary non-italic`}
+        className={`${alice.variable} ${anticDidone.variable} ${mrDeHaviland.variable} antialiased font-primary non-italic leading-relaxed`}
       >
         <Header />
         <Toaster />

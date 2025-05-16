@@ -2,6 +2,21 @@
 
 import { useForm } from "react-hook-form";
 import { sendEmail } from "../../lib/utils/send-email";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
 export type FormData = {
   name: string;
@@ -9,76 +24,114 @@ export type FormData = {
   message: string;
 };
 
-const ContactForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<FormData>();
+const FormSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({ message: "Invalid email address" }),
+  message: z.string().min(3, {
+    message: "Message must be at least 3 characters.",
+  }),
+});
 
-  const onSubmit = async (data: FormData) => {
+const ContactForm = () => {
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
     const success = await sendEmail(data);
 
     if (success) {
-      reset(); // Clear inputs in form when submit = success
+      form.reset(); // Clear inputs in form when submit = success
     }
-  };
+  }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full p-5">
-      {/* Name */}
-      {errors.name && (
-        <p className="text-red-500 text-sm mt-2">{errors.name.message}</p>
-      )}
-      <label htmlFor="name" className="mb-8 block text-base font-medium">
-        Full Name
-        <input
-          id="name"
-          type="text"
-          placeholder="Full Name"
-          className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
-          {...register("name", { required: "*Name is required" })}
-        />
-      </label>
-
-      {/* E-mail */}
-      {errors.email && (
-        <p className="text-red-500 text-sm mt-2">{errors.email.message}</p>
-      )}
-      <label htmlFor="email" className="mb-8 block text-base font-medium">
-        E-mail
-        <input
-          id="email"
-          type="email"
-          placeholder="example@domain.com"
-          className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
-          {...register("email", { required: "*E-mail is required" })}
-        />
-      </label>
-
-      {/* Message */}
-      {errors.message && (
-        <p className="text-red-500 text-sm mt-2">{errors.message.message}</p>
-      )}
-      <label htmlFor="message" className="mb-5 block text-base font-medium">
-        Message
-        <textarea
-          id="message"
-          rows={4}
-          placeholder="Type your message"
-          className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
-          {...register("message", { required: "*Message is required" })}
-        ></textarea>
-      </label>
-
-      <button
-        type="submit"
-        className="w-full rounded-lg bg-primary py-3 px-8 outline-none text-foreground font-primary uppercase hover:bg-secondary cursor-pointer"
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col p-5 gap-5 w-full"
       >
-        Send
-      </button>
-    </form>
+        {/* Name */}
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Full Name</FormLabel>
+              <FormControl>
+                <Input
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
+                  placeholder="Enter full name"
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription className="sr-only">
+                Write your full name
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        ></FormField>
+
+        {/* E-mail */}
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>E-mail</FormLabel>
+              <FormControl>
+                <Input
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
+                  placeholder="you@example.com"
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription className="sr-only">
+                Write your e-mail
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        ></FormField>
+
+        {/* Message */}
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Message</FormLabel>
+              <FormControl>
+                <Textarea
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
+                  placeholder="Type your message here."
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription className="sr-only">
+                Send me a message
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        ></FormField>
+
+        <Button
+          type="submit"
+          className="w-full rounded-lg bg-primary py-3 px-8 outline-none text-foreground font-primary uppercase hover:bg-secondary cursor-pointer"
+        >
+          Send
+        </Button>
+      </form>
+    </Form>
   );
 };
 
