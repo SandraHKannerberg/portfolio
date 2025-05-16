@@ -32,8 +32,8 @@ export default function HomePage() {
 
           <main ref={containerRef} className="space-y-40">
             <About />
-            <CvDownload />
             <Work />
+            <CvDownload />
             <Skills />
             <Projects />
             <Contact />
