@@ -64,11 +64,11 @@ const ContactForm = () => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel className="text-foreground">Full Name</FormLabel>
               <FormControl>
                 <Input
-                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
-                  placeholder="Enter full name"
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6 border-0 border-b-2"
+                  placeholder="Enter your full name"
                   {...field}
                 />
               </FormControl>
@@ -86,10 +86,10 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>E-mail</FormLabel>
+              <FormLabel className="text-foreground">E-mail</FormLabel>
               <FormControl>
                 <Input
-                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6 border-0 border-b-2"
                   placeholder="you@example.com"
                   {...field}
                 />
@@ -108,10 +108,10 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel className="text-foreground">Message</FormLabel>
               <FormControl>
                 <Textarea
-                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium text-gray-700 outline-2 focus:outline-primary focus:outline-offset-6"
+                  className="w-full rounded-lg bg-background py-3 px-3 text-base font-medium outline-2 focus:outline-primary focus:outline-offset-6  border-0 border-b-2"
                   placeholder="Type your message here."
                   {...field}
                 />
@@ -126,7 +126,8 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="w-full rounded-lg bg-primary py-3 px-8 outline-none text-foreground font-primary uppercase hover:bg-secondary cursor-pointer"
+          variant="outline"
+          className="w-full rounded-lg p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background outline-none text-foreground font-primary"
         >
           Send
         </Button>
