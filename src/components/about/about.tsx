@@ -1,29 +1,36 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import TextAnimWrapper from "../animations/text-anim-wrapper";
+import { useGSAP } from "@gsap/react";
+import { animHeading } from "@/lib/utils/animations";
 
 const About = () => {
+  const containerRef = useRef(null);
+  useGSAP(
+    () => {
+      animHeading(".heading");
+    },
+    { scope: containerRef }
+  );
   return (
     <>
       <section
         id="about"
-        className="grid grid-cols-1 gap-10 md:grid-cols-2 my-40"
+        className="grid grid-cols-4 justify-between my-40 min-h-screen"
       >
-        <section>
-          <div className="flex flex-col col-span-2 mb-20">
-            <TextAnimWrapper>
-              <p className="block font-handwritten text-6xl lowercase indent-10">
-                a little
-              </p>
-              <h2
-                id="main-heading"
-                className="text-8xl lg:text-9xl font-secondary uppercase"
-              >
-                About me
-              </h2>
-            </TextAnimWrapper>
-          </div>
+        <div
+          ref={containerRef}
+          className="flex flex-col col-span-4 mb-10 md:mb-20 justify-center items-center md:items-start"
+        >
+          <p className="block font-handwritten text-6xl lowercase heading">
+            a little
+          </p>
+          <h2 className="text-6xl lg:text-9xl font-secondary uppercase heading">
+            About me
+          </h2>
+        </div>
 
+        <section className="col-span-4 md:col-start-2 md:col-end-5">
           <TextAnimWrapper>
             <p className="text-xl mb-10">
               I am a fullstack web developer with a frontend heart – passionate
@@ -36,16 +43,16 @@ const About = () => {
             </p>
 
             <p className="text-xl">
-              My fullstack development and design passion allows me to build
-              projects from the ground up, transforming ideas into powerful and
-              user-centric solutions. A true frontend addict who thrives on
-              pixel perfection and modern UI/UX design, I build with the end
-              user always in mind.
+              My fullstack development knowledge and design passion allows me to
+              build projects from the ground up, transforming ideas into
+              powerful and user-centric solutions. A true frontend addict who
+              thrives on pixel perfection and modern UI/UX design, I build with
+              the end user always in mind.
             </p>
           </TextAnimWrapper>
         </section>
 
-        <figure className="fade-in grid col-span-2 justify-self-center items-end lg:justify-self-end w-80 h-65">
+        <figure className="fade-in grid col-span-4 my-20 justify-center items-center md:justify-self-start w-80 h-65">
           <Image
             src="/images/work.svg"
             alt="Illustration of a businesswoman"

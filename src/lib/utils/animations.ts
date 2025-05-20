@@ -130,3 +130,27 @@ export const parallaxScroll = (
     },
   });
 };
+
+export const animHeading = (selector: string) => {
+  gsap.set(selector, { opacity: 1 });
+
+  let split = SplitText.create(".heading", {
+    type: "chars",
+    charsClass: "char++",
+    smartWrap: true,
+  });
+
+  gsap.from(split.chars, {
+    y: 20,
+    autoAlpha: 0,
+    stagger: 0.05,
+    duration: 2,
+    ease: "bounce",
+    opacity: 0,
+    scrollTrigger: {
+      trigger: selector,
+      start: "bottom 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+};

@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import { IProject } from "@/lib/interfaces";
 
 import data from "../../../public/data/projects-data.json";
 import ProjectsTimeline from "./projects-timeline";
-import TextAnimWrapper from "../animations/text-anim-wrapper";
+import { useGSAP } from "@gsap/react";
+import { animHeading } from "@/lib/utils/animations";
 
 const Projects = () => {
   const projectsData = data as IProject[];
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      animHeading(".heading");
+    },
+    { scope: containerRef }
+  );
 
   return (
     <section id="projects" className="grid grid-cols-1 md:grid-cols-12 my-50">
@@ -22,15 +31,16 @@ const Projects = () => {
         />
       </figure>
 
-      <div className="col-span-12 md:col-span-6 flex flex-col items-end justify-center">
-        <TextAnimWrapper>
-          <p className="block font-handwritten text-6xl lowercase indent-10">
-            selected
-          </p>
-          <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase">
-            Projects
-          </h2>
-        </TextAnimWrapper>
+      <div
+        ref={containerRef}
+        className="col-span-12 md:col-span-6 flex flex-col justify-center items-center md:items-end"
+      >
+        <p className="block font-handwritten text-6xl lowercase heading">
+          selected
+        </p>
+        <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase heading">
+          Projects
+        </h2>
       </div>
 
       <h3 className="pb-5 text-lg uppercase sr-only">Projects timeline</h3>
