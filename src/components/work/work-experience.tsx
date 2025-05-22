@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Image from "next/image";
 import ExperienceTimeline from "@/components/work/experience-timeline";
 import { animHeading } from "@/lib/utils/animations";
 import { useGSAP } from "@gsap/react";
@@ -13,9 +14,18 @@ const WorkExperience = () => {
   );
   return (
     <section id="work" className="grid grid-cols-12">
+      <figure className="fade-in grid col-span-12 md:col-span-6 my-20 justify-center items-center md:justify-self-start w-80 h-65">
+        <Image
+          src="/images/work.svg"
+          alt="Illustration of a businesswoman"
+          width={400}
+          height={400}
+          priority
+        />
+      </figure>
       <div
         ref={containerRef}
-        className="col-span-12 flex flex-col justify-center items-center md:items-end"
+        className="col-span-12 md:col-span-6 flex flex-col justify-center items-center md:items-end"
       >
         <p className="block font-handwritten text-6xl lowercase heading">
           work

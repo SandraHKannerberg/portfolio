@@ -18,7 +18,7 @@ const Skills = () => {
   );
 
   return (
-    <section ref={containerRef} id="skills" className="grid grid-cols-12 my-20">
+    <section ref={containerRef} id="skills" className="grid grid-cols-12 my-40">
       <div className="col-span-12 md:col-span-6 flex flex-col mb-10 justify-center items-center md:items-start">
         <p className="block font-handwritten text-6xl lowercase heading">
           my tech
