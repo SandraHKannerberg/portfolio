@@ -75,7 +75,7 @@ const ContactForm = () => {
               <FormDescription className="sr-only">
                 Write your full name
               </FormDescription>
-              <FormMessage />
+              <FormMessage className="text-red-600" />
             </FormItem>
           )}
         ></FormField>
@@ -97,7 +97,7 @@ const ContactForm = () => {
               <FormDescription className="sr-only">
                 Write your e-mail
               </FormDescription>
-              <FormMessage />
+              <FormMessage className="text-red-600" />
             </FormItem>
           )}
         ></FormField>
@@ -119,15 +119,15 @@ const ContactForm = () => {
               <FormDescription className="sr-only">
                 Send me a message
               </FormDescription>
-              <FormMessage />
+              <FormMessage className="text-red-600" />
             </FormItem>
           )}
         ></FormField>
 
         <Button
           type="submit"
-          variant="outline"
-          className="w-full rounded-lg p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background outline-none text-foreground font-primary"
+          variant="default"
+          className="w-full rounded-xl p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background outline-none text-foreground font-primary"
         >
           Send
         </Button>
