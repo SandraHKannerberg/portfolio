@@ -29,6 +29,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent-clr-primary);
+  --color-light: var(--light);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--light);
@@ -64,10 +66,27 @@
 }
 
 @layer utilities {
+  /* Useful for the animations */
   .char {
     display: inline-block;
     overflow: visible;
     will-change: transform;
     white-space: pre;
+  }
+
+  .anim-heading {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .anim-block {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .divider {
+    transform: scaleY(0%);
+  }
+
+  .hero {
+    will-change: transform;
   }
 }
