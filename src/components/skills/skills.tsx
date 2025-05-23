@@ -20,11 +20,10 @@ const Skills = () => {
   return (
     <section ref={containerRef} id="skills" className="grid grid-cols-12 my-40">
       <div className="col-span-12 md:col-span-6 flex flex-col mb-10 justify-center items-center md:items-start">
-        <p className="block font-handwritten text-6xl lowercase heading">
-          my tech
-        </p>
-
         <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase text-foreground heading">
+          <span className="block font-handwritten text-6xl lowercase heading">
+            my tech
+          </span>
           Skills
         </h2>
       </div>

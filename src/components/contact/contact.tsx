@@ -19,10 +19,10 @@ const Contact = () => {
     <section id="contact" className="grid md:grid-cols-2 justify-center">
       <section className="flex flex-col gap-3 justify-center items-center col-span-2">
         <div ref={containerRef} className="flex flex-col text-center">
-          <p className="block font-handwritten text-6xl lowercase heading">
-            let&apos;s
-          </p>
           <h2 className="text-8xl lg:text-9xl mb-5 font-secondary uppercase leading-snug heading">
+            <span className="block font-handwritten text-6xl lowercase heading">
+              let&apos;s
+            </span>
             Get in touch
           </h2>
         </div>
