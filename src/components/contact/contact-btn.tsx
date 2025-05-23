@@ -12,7 +12,7 @@ const ContactBtn = ({ text, className }: ContactBtnProps) => {
     <Link href="mailto:sandra.hkannerberg@gmail.com">
       <Button
         variant="outline"
-        className={`${className} rounded-full p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background`}
+        className={`${className} rounded-full shadow p-3 uppercase flex justify-center items-center cursor-pointer hover:bg-secondary hover:text-background`}
       >
         {text}
       </Button>

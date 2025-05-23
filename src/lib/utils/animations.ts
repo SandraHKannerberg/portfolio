@@ -50,7 +50,7 @@ export const fallingLettersAnimation = (target: Element): Promise<void> => {
         x: 0,
         rotation: 0,
         opacity: 1,
-        duration: 3,
+        duration: 1,
         ease: "bounce.out",
         stagger: {
           each: 0.2,
