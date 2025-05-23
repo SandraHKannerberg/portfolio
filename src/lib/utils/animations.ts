@@ -110,7 +110,7 @@ export const dropOneByOne = (selector: string) => {
 export const animHeading = (selector: string) => {
   gsap.set(selector, { opacity: 1 });
 
-  let split = SplitText.create(".heading", {
+  const split = SplitText.create(".heading", {
     type: "chars",
     charsClass: "char++",
     smartWrap: true,
