@@ -3,15 +3,13 @@ import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import Hero from "@/components/hero/hero";
 import About from "@/components/about/about";
 import Work from "@/components/work/work-experience";
-import ScrollDown from "@/components/ui/scroll-down";
 import Skills from "@/components/skills/skills";
 import Projects from "@/components/projects/projects";
 import CvDownload from "@/components/work/cv-download";
 import Contact from "@/components/contact/contact";
-import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { fadeInOnScroll } from "@/lib/utils/animations";
-import { ReactLenis } from "lenis/react";
+import { useRef } from "react";
 
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -25,21 +23,17 @@ export default function HomePage() {
 
   return (
     <>
-      <ReactLenis root>
-        <MaxWidthWrapper>
-          <Hero />
-          <ScrollDown />
-
-          <main ref={containerRef} className="space-y-40">
-            <About />
-            <Work />
-            <CvDownload />
-            <Skills />
-            <Projects />
-            <Contact />
-          </main>
-        </MaxWidthWrapper>
-      </ReactLenis>
+      <Hero />
+      <MaxWidthWrapper>
+        <main ref={containerRef} className="space-y-40">
+          <About />
+          <Work />
+          <CvDownload />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </MaxWidthWrapper>
     </>
   );
 }
