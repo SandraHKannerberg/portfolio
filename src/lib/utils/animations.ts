@@ -5,9 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 // gsap plugins
-gsap.registerPlugin(ScrollToPlugin);
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
 
 /**
  * Soft scroll when click on i link in the navbar
@@ -52,7 +50,7 @@ export const fallingLettersAnimation = (target: Element): Promise<void> => {
         x: 0,
         rotation: 0,
         opacity: 1,
-        duration: 3,
+        duration: 1,
         ease: "bounce.out",
         stagger: {
           each: 0.2,
@@ -108,25 +106,27 @@ export const dropOneByOne = (selector: string) => {
   });
 };
 
-// Parallax effect on scroll
-export const parallaxScroll = (
-  parallaxItemRef: HTMLElement,
-  textRef: HTMLElement,
-  parallaxContainerRef: HTMLElement
-) => {
-  // Parallax scroll for form
-  gsap.to(parallaxItemRef, {
-    y: () => {
-      // Dynamic value - scroll upp to this ref - then stop
-      const textBox = textRef?.getBoundingClientRect().height || 0;
-      return -textBox;
-    },
-    ease: "none",
+// Text animation for headings
+export const animHeading = (selector: string) => {
+  gsap.set(selector, { opacity: 1 });
+
+  const split = SplitText.create(".heading", {
+    type: "chars",
+    charsClass: "char++",
+    smartWrap: true,
+  });
+
+  gsap.from(split.chars, {
+    y: 20,
+    autoAlpha: 0,
+    stagger: 0.05,
+    duration: 2,
+    ease: "bounce",
+    opacity: 0,
     scrollTrigger: {
-      trigger: parallaxContainerRef,
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
+      trigger: selector,
+      start: "bottom 80%",
+      toggleActions: "play none none reverse",
     },
   });
 };

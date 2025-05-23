@@ -12,8 +12,7 @@ import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 
 // gsap plugins
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 interface TextAnimWrapperProps {
   children: React.ReactNode;
@@ -35,7 +34,7 @@ export default function TextAnimWrapper({
 }: TextAnimWrapperProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const splitRef = useRef<SplitText[]>([]);
-  const lines = useRef<HTMLElement[]>([]);
+  const wordsRef = useRef<HTMLElement[]>([]);
 
   useGSAP(
     () => {
@@ -43,7 +42,7 @@ export default function TextAnimWrapper({
 
       // Reset
       splitRef.current = [];
-      lines.current = [];
+      wordsRef.current = [];
 
       const isWrapper = containerRef.current.hasAttribute("data-copy-wrapper");
 
@@ -57,42 +56,42 @@ export default function TextAnimWrapper({
       // SplitText setup
       splitRef.current = elements.map((element) =>
         SplitText.create(element, {
-          type: "lines",
-          mask: "lines", // Create a visual ‘mask’ that hides the content until it is animated
-          linesClass: "line++",
-          autoSplit: true, // Important for responsive design
+          type: "words",
+          mask: "words",
+          wordsClass: "word++",
         })
       );
 
       // Collect every lines in an array
-      lines.current = splitRef.current.flatMap((split) =>
-        htmlElementsArray(split.lines)
+      wordsRef.current = splitRef.current.flatMap((split) =>
+        htmlElementsArray(split.words)
       );
 
       // Staring position
-      gsap.set(lines.current, { y: "100%" });
+      gsap.set(wordsRef.current, { opacity: 1, filter: "blur(0px)" });
 
       // Animation settings
       const animationProps = {
-        y: "0%",
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        delay: delay,
+        opacity: 0,
+        filter: "blur(8px)",
+        y: 20,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.05,
       };
 
       // Scroll-trigger config
       if (animateOnScroll) {
-        gsap.to(lines.current, {
+        gsap.from(wordsRef.current, {
           ...animationProps,
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top 70%",
+            start: "top 80%",
             toggleActions: "play none none reverse",
           },
         });
       } else {
-        gsap.to(lines.current, animationProps);
+        gsap.to(wordsRef.current, animationProps);
       }
 
       // cleanup function

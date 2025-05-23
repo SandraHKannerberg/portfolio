@@ -20,12 +20,12 @@ const FallingLetters = ({ letters, className }: FallingLettersProps) => {
   return (
     <section
       ref={containerRef}
-      className={`grid grid-cols-3 gap-10 col-span-2 md:col-span-1 z-5 md:my-10 ${className}`}
+      className={`grid grid-cols-3 my-auto gap-5 lg:gap-10 col-span-2 md:col-span-1 z-5 ${className}`}
     >
       {letters.map((char, index) => (
         <div
           key={index}
-          className="letter flex items-center justify-center font-secondary text-8xl uppercase"
+          className="letter flex items-center justify-center font-secondary text-[clamp(4.5rem,8vw,20rem)] uppercase"
         >
           {char}
         </div>
