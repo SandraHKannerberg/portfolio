@@ -4,62 +4,40 @@ import TextAnimWrapper from "../animations/text-anim-wrapper";
 import ContactBtn from "./contact-btn";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { parallaxScroll } from "@/lib/utils/animations";
+import { animHeading } from "@/lib/utils/animations";
 
 const Contact = () => {
-  const parallaxContainerRef = useRef(null);
-  const parallaxItemRef = useRef(null);
-  const textRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
+  useGSAP(
+    () => {
+      animHeading(".heading");
+    },
+    { scope: containerRef }
+  );
 
-  useGSAP(() => {
-    if (
-      !parallaxItemRef.current ||
-      !parallaxContainerRef.current ||
-      !textRef.current
-    )
-      return;
-    parallaxScroll(
-      parallaxItemRef.current,
-      textRef.current,
-      parallaxContainerRef.current
-    );
-  }, []);
   return (
-    <section
-      ref={parallaxContainerRef}
-      id="contact"
-      className="grid md:grid-cols-2 gap-[10rem] relativ min-h-screen"
-    >
-      <section className="flex flex-col gap-3 justify-center items-center md:items-start md:text-left col-span-2 sticky top-32 z-10">
-        <TextAnimWrapper>
-          <div className="flex flex-col mx-auto">
-            <p className="block font-handwritten text-6xl lg:text-[8rem] lowercase px-5">
+    <section id="contact" className="grid md:grid-cols-2 justify-center">
+      <section className="flex flex-col gap-3 justify-center items-center col-span-2">
+        <div ref={containerRef} className="flex flex-col text-center">
+          <h2 className="text-8xl lg:text-9xl mb-5 font-secondary uppercase leading-snug heading">
+            <span className="block font-handwritten text-6xl lowercase heading">
               let&apos;s
-            </p>
-            <h2
-              className="text-7xl lg:text-[10rem] mb-5 font-secondary uppercase"
-              ref={textRef}
-            >
-              Get in touch
-            </h2>
-          </div>
-        </TextAnimWrapper>
+            </span>
+            Get in touch
+          </h2>
+        </div>
 
         <TextAnimWrapper>
-          <p className="indent-10">
+          <p className="text-center">
             Ready to built amazing things together? Reaching out to offer a new
             opportunity? Just want to say Hello? Feel free to fill out the form
             or send me an e-mail—let&apos;s connect today!
           </p>
         </TextAnimWrapper>
-
-        <ContactBtn text="E-mail me" className="m-[2.5rem]" />
+        <ContactBtn text="E-mail me" className="fade-in m-[2.5rem]" />
       </section>
 
-      <section
-        ref={parallaxItemRef}
-        className="col-span-2 flex gap-3 justify-end items-end bg-foreground text-background shadow-lg rounded py-5  my-10 md:my-0 w-full md:w-[50vw] lg:w-[25vw] justify-self-end relative z-20"
-      >
+      <section className="fade-in col-span-2 flex flex-col gap-3 justify-center items-center bg-background border-1 border-foreground shadow-lg rounded py-5 md:my-0 h-fit w-full md:w-[50vw] mx-auto">
         <ContactForm />
       </section>
     </section>

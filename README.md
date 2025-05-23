@@ -12,16 +12,17 @@ This portfolio is built using:
 - Tailwind CSS – for efficient and responsive styling.
 - ShadCN – for sleek, reusable UI components.
 - GSAP – for smooth and engaging animations.
+- Nodemailer - users can fill in a form and send a message to my e-mail. Auto-reply "Thank you for your message".
 - react-vertical-timeline-component – to implement a neat and tidy timeline for my experience journey.
 - react-type-animation – a customizable React typing animation component.
 
 # 🎯 Key Features
 
-- Fully responsive design – Optimized for all screen sizes
-- Smooth animations – Enhancing user interaction with Framer Motion
-- High accessibility – Built with best practices to ensure usability for all users
-- Fast and optimized – Leveraging Next.js for better performance and SEO
-- Achieving a high Lighthouse score
+- Fully responsive design – Optimized for all screen sizes.
+- Smooth animations – SplitText-animations, smooth scroll and parallax scroll effect with GSAP, enhancing user interaction.
+- High accessibility – Built with best practices to ensure usability for all users.
+- Fast and optimized – Leveraging Next.js for better performance and SEO.
+- Achieving a high Lighthouse score.
 
 # 🛠️ Getting Started
 
