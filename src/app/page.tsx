@@ -25,7 +25,7 @@ export default function HomePage() {
     <>
       <Hero />
       <MaxWidthWrapper>
-        <main ref={containerRef} className="space-y-40">
+        <main ref={containerRef} className="space-y-40 px-5">
           <About />
           <Work />
           <CvDownload />
