@@ -6,21 +6,25 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Star } from "lucide-react";
-import { IProject } from "@/lib/interfaces";
+import { IProject } from "@/interfaces";
 import LinkWithIcon from "../ui/link-with-icon";
 
 const ProjectsTimeline = ({ projects }: { projects: IProject[] }) => {
   return (
     <VerticalTimeline className="col-span-12">
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <VerticalTimelineElement
-          key={index}
+          key={project.id}
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#f2f2f2", color: "#303c31" }}
           contentArrowStyle={{ borderRight: "7px solid #f2f2f2" }}
           date={project.date}
           iconStyle={{ background: "#ece3dc", color: "#303c31" }}
           icon={<Star />}
+          intersectionObserverProps={{
+            triggerOnce: true,
+            threshold: 0.9,
+          }}
         >
           <h3 className="vertical-timeline-element-title font-semibold uppercase text-center">
             {project.title}

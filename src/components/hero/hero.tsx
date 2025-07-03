@@ -8,7 +8,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative grid grid-cols-2 items-center my-10"
+        className="relative grid grid-cols-2 items-center my-10 lg:my-0"
       >
         <section className="col-span-2 text-center md:col-span-1">
           <h1 className="text-xl">Hi & welcome, I&apos;m Sandra</h1>
@@ -39,7 +39,7 @@ const Hero = () => {
         <FallingLetters
           letters={["p", "o", "r", "t", "f", "o", "l", "i", "o"]}
         />
-        <div className="absolute -bottom-30">
+        <div className="absolute -bottom-30 lg:-bottom-10">
           <ScrollDown />
         </div>
       </section>
