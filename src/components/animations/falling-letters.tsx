@@ -20,7 +20,7 @@ const FallingLetters = ({ letters, className }: FallingLettersProps) => {
   return (
     <section
       ref={containerRef}
-      className={`grid grid-cols-3 my-auto gap-5 lg:gap-10 col-span-2 md:col-span-1 z-5 ${className}`}
+      className={`grid grid-cols-3 gap-5 lg:gap-10 col-span-2 md:col-span-1 z-5 ${className}`}
     >
       {letters.map((char, index) => (
         <div
