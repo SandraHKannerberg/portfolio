@@ -21,6 +21,10 @@ const ProjectsTimeline = ({ projects }: { projects: IProject[] }) => {
           date={project.date}
           iconStyle={{ background: "#ece3dc", color: "#303c31" }}
           icon={<Star />}
+          intersectionObserverProps={{
+            triggerOnce: true,
+            threshold: 0.9,
+          }}
         >
           <h3 className="vertical-timeline-element-title font-semibold uppercase text-center">
             {project.title}
