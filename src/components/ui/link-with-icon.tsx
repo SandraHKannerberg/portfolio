@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ReactNode } from "react";
-import { ILink } from "@/lib/interfaces";
+import { ILink } from "@/types/link";
 
 type LinkWithIconProps = ILink & {
   icon?: ReactNode;
