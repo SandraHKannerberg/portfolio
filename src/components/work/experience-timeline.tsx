@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import data from "../../../public/data/experience.json";
-import { IExperience } from "@/types";
+import { IExperience } from "@/interfaces";
 
 const ExperienceTimeline = () => {
   const experienceData = data as IExperience[];

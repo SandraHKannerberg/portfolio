@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 
-import { IProject } from "@/types";
+import { IProject } from "@/interfaces";
 
 import data from "../../../public/data/projects.json";
 import ProjectsTimeline from "./projects-timeline";

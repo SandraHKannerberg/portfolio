@@ -1,4 +1,4 @@
-import { ILink } from "@/types/link";
+import { ILink } from "@/interfaces/link";
 
 export const LINKEDIN =
   "https://www.linkedin.com/in/sandra-h%C3%B6st-kannerberg-086a9b7b/";

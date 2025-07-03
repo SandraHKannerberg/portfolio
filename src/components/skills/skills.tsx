@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import data from "../../../public/data/skills.json";
-import { ISkill } from "@/types";
+import { ISkill } from "@/interfaces";
 import { useGSAP } from "@gsap/react";
 import { animHeading, dropOneByOne } from "@/lib/utils/animations";
 
