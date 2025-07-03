@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
-import data from "../../../public/data/skills-data.json";
-import { ISkill } from "@/lib/interfaces";
+import data from "../../../public/data/skills.json";
+import { ISkill } from "@/types";
 import { useGSAP } from "@gsap/react";
 import { animHeading, dropOneByOne } from "@/lib/utils/animations";
 
@@ -29,13 +29,13 @@ const Skills = () => {
       </div>
 
       <section className="items-to-drop grid col-span-12 gap-2 gap-y-8 place-items-center py-5 grid-cols-3 md:grid-cols-5 lg:grid-cols-9 opacity-75 grayscale hover:opacity-100 hover:grayscale-0">
-        {skillsData.map((skill, index) => (
+        {skillsData.map((skill) => (
           <figure
-            key={index}
+            key={skill.id}
             className="item-to-drop flex flex-col items-center m-4 sm:my-0 w-[3rem] md:w-[4rem]"
           >
             <Image src={skill.src} alt={skill.alt} width={100} height={100} />
-            <figcaption className="mt-2">{skill.name}</figcaption>
+            <figcaption className="mt-2">{skill.skill}</figcaption>
           </figure>
         ))}
       </section>
