@@ -1,6 +1,6 @@
 "use client";
 import NavBar from "../navigation/navbar";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-is-mobile";
 import Link from "next/link";
 import DrawerMenu from "../navigation/drawer-menu";
 
