@@ -1,0 +1,104 @@
+[
+  {
+    "src": "/skills/html.svg",
+    "alt": "HTML logotype",
+    "skill": "HTML",
+    "id": "6bbc845b-2e33-4e6a-aadb-a6bb642bbca0"
+  },
+  {
+    "src": "/skills/css.svg",
+    "alt": "CSS logotype",
+    "skill": "CSS",
+    "id": "d1177a22-d95d-4238-aa22-e13583e6ac33"
+  },
+  {
+    "src": "/skills/javascript.svg",
+    "alt": "JavaScript logotype",
+    "skill": "JavaScript",
+    "id": "8663234a-f0c5-4cd3-9757-c22c7ff5ca0d"
+  },
+  {
+    "src": "/skills/typescript.svg",
+    "alt": "TypeScript logotype",
+    "skill": "TypeScript",
+    "id": "40a34cf1-422e-4b35-bea8-047e9b820ce4"
+  },
+  {
+    "src": "/skills/react.svg",
+    "alt": "React logotype",
+    "skill": "React",
+    "id": "84f2a953-7081-477a-aff6-8b5511f9ab9a"
+  },
+  {
+    "src": "/skills/next-js.svg",
+    "alt": "NextJs logotype",
+    "skill": "NextJs",
+    "id": "958e5a7f-1ec5-44ff-81a1-0905159c2c15"
+  },
+  {
+    "src": "/skills/tailwind.svg",
+    "alt": "Tailwind logotype",
+    "skill": "Tailwind",
+    "id": "fd072dee-4e99-4f71-ac99-f715da2390ea"
+  },
+  {
+    "src": "/skills/bootstrap.svg",
+    "alt": "Bootstrap logotype",
+    "skill": "Bootstrap",
+    "id": "1635c880-1c69-4621-9f4e-e26d36fa329c"
+  },
+  {
+    "src": "/skills/antdesign.svg",
+    "alt": "AntDesign logotype",
+    "skill": "AntDesign",
+    "id": "b0a3dd1a-5318-4706-a93f-83d53a2db583"
+  },
+  {
+    "src": "/skills/materialui.svg",
+    "alt": "MaterialUI logotype",
+    "skill": "MaterialUI",
+    "id": "4b83169c-601c-4cca-90ed-02780fea65f8"
+  },
+  {
+    "src": "/skills/node-js.svg",
+    "alt": "NodeJs logotype",
+    "skill": "NodeJs",
+    "id": "709f9daf-c2c2-4346-b0e0-2df3eee77f53"
+  },
+  {
+    "src": "/skills/mongodb.svg",
+    "alt": "MongoDB logotype",
+    "skill": "MongoDB",
+    "id": "88d82c10-14b4-41f8-afe2-56dbeb7233ac"
+  },
+  {
+    "src": "/skills/mysql.svg",
+    "alt": "MySQL logotype",
+    "skill": "MySQL",
+    "id": "eac985b0-8f0f-4d83-b66e-bfaf9aa1fb68"
+  },
+  {
+    "src": "/skills/postgresql.svg",
+    "alt": "PostgreSQL logotype",
+    "skill": "PostgreSQL",
+    "id": "1f495892-cb2f-4bff-bf2e-d0c303365d53"
+  },
+  {
+    "src": "/skills/git.svg",
+    "alt": "Git logotype",
+    "skill": "Git",
+    "id": "544a9d5a-e4ac-4cd8-9331-6c6767b450e2"
+  },
+  {
+    "src": "/skills/github.svg",
+    "alt": "GitHub logotype",
+    "skill": "GitHub",
+    "id": "37661652-2f32-4be5-ad9c-5bb7be917ef6"
+  },
+  {
+    "src": "/skills/graphql.svg",
+    "alt": "GraphQL logotype",
+    "skill": "GraphQL",
+    "id": "e8443934-eb38-4bf5-96c4-612cb7d3c422"
+  }
+]
