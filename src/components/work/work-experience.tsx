@@ -25,7 +25,7 @@ const WorkExperience = () => {
       </figure>
       <div
         ref={containerRef}
-        className="col-span-12 md:col-span-6 flex flex-col justify-center items-center md:items-end"
+        className="col-span-12 md:col-span-6 flex flex-col justify-center"
       >
         <h2 className="text-6xl sm:text-8xl lg:text-9xl font-secondary uppercase heading">
           <span className="block font-handwritten text-6xl lowercase heading">
