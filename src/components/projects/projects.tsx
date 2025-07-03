@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 
-import { IProject } from "@/types";
+import { IProject } from "@/interfaces";
 
 import data from "../../../public/data/projects.json";
 import ProjectsTimeline from "./projects-timeline";
@@ -33,7 +33,7 @@ const Projects = () => {
 
       <div
         ref={containerRef}
-        className="col-span-12 md:col-span-6 flex flex-col justify-center items-center md:items-end"
+        className="col-span-12 md:col-span-6 flex flex-col justify-center md:items-end"
       >
         <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase heading">
           <span className="block font-handwritten text-6xl lowercase heading">

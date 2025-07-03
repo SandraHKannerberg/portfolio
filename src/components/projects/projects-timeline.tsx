@@ -6,7 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { Star } from "lucide-react";
-import { IProject } from "@/types";
+import { IProject } from "@/interfaces";
 import LinkWithIcon from "../ui/link-with-icon";
 
 const ProjectsTimeline = ({ projects }: { projects: IProject[] }) => {
@@ -21,6 +21,10 @@ const ProjectsTimeline = ({ projects }: { projects: IProject[] }) => {
           date={project.date}
           iconStyle={{ background: "#ece3dc", color: "#303c31" }}
           icon={<Star />}
+          intersectionObserverProps={{
+            triggerOnce: true,
+            threshold: 0.9,
+          }}
         >
           <h3 className="vertical-timeline-element-title font-semibold uppercase text-center">
             {project.title}

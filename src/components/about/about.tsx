@@ -16,7 +16,7 @@ const About = () => {
       <section id="about" className="grid grid-cols-4 justify-between my-40">
         <div
           ref={containerRef}
-          className="flex flex-col col-span-4 mb-10 md:mb-20 justify-center items-center md:items-start"
+          className="flex flex-col col-span-4 mb-10 md:mb-20 justify-center"
         >
           <h2 className="text-6xl lg:text-9xl font-secondary uppercase heading">
             <span className="block font-handwritten text-6xl lowercase heading">

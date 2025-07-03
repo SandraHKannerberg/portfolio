@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import data from "../../../public/data/skills.json";
-import { ISkill } from "@/types";
+import { ISkill } from "@/interfaces";
 import { useGSAP } from "@gsap/react";
 import { animHeading, dropOneByOne } from "@/lib/utils/animations";
 
@@ -19,7 +19,7 @@ const Skills = () => {
 
   return (
     <section ref={containerRef} id="skills" className="grid grid-cols-12 my-40">
-      <div className="col-span-12 md:col-span-6 flex flex-col mb-10 justify-center items-center md:items-start">
+      <div className="col-span-12 md:col-span-6 flex flex-col mb-10 justify-center">
         <h2 className="text-6xl lg:text-9xl mb-5 font-secondary uppercase text-foreground heading">
           <span className="block font-handwritten text-6xl lowercase heading">
             my tech

@@ -6,7 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
 import data from "../../../public/data/experience.json";
-import { IExperience } from "@/types";
+import { IExperience } from "@/interfaces";
 
 const ExperienceTimeline = () => {
   const experienceData = data as IExperience[];
@@ -22,6 +22,10 @@ const ExperienceTimeline = () => {
           date={exp.date}
           iconStyle={{ background: "#ece3dc", color: "#303c31" }}
           icon={exp.isEducation ? <GraduationCap /> : <BriefcaseBusiness />}
+          intersectionObserverProps={{
+            triggerOnce: true,
+            threshold: 0.8,
+          }}
         >
           <h3 className="vertical-timeline-element-title font-semibold uppercase">
             {exp.title}
