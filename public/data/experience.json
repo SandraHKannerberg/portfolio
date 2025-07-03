@@ -4,48 +4,55 @@
     "title": "Frontend Developer, Intern",
     "date": "Apr 2025 - ongoing",
     "desc": "Contribute as a Frontend Developer to the project Boost By Mojjo. Collaborating closely with the team in an agile workflow, from the planning phase to building a new, innovative and inspiring platform for startups.",
-    "isEducation": false
+    "isEducation": false,
+    "id": "7c33c44d-f847-4333-abaa-86af35dcd543"
   },
   {
     "companyOrSchool": "Lexicon IT-Proffs AB",
     "title": "Advanced training, Frontend Web Developer",
     "date": "Nov 2024 - Apr 2025",
     "desc": "Completed advanced training in frontend development with focus on modern frameworks and responsive design.",
-    "isEducation": true
+    "isEducation": true,
+    "id": "f60af710-0435-4f74-90ee-8793803cab01"
   },
   {
     "companyOrSchool": "Propida Solutions AB",
     "title": "Fullstack Developer",
     "date": "Feb 2024 - Nov 2024",
     "desc": "Developed fullstack features from backend logic to polished, responsive user interfaces with a focus on UI/UX. Collaborating closely with the team.",
-    "isEducation": false
+    "isEducation": false,
+    "id": "bd55f3ff-658c-4d5a-a4fe-75cf35b04f2b"
   },
   {
     "companyOrSchool": "Medieinstitutet",
     "title": "Web Developer, e-commerce",
     "date": "Sep 2022 - May 2024",
     "desc": "Higher Vocational Education Diploma - Completed fullstack development training covering both modern frontend and backend technologies.",
-    "isEducation": true
+    "isEducation": true,
+    "id": "8f2416f6-6a11-48bf-b10f-12e51ce286f9"
   },
   {
     "companyOrSchool": "Byggdagboken",
     "title": "Fullstack Developer, Intern",
     "date": "Sep 2023 - Dec 2023",
     "desc": "As part of a team I contribute to build a login page to facilitate the user experience.",
-    "isEducation": false
+    "isEducation": false,
+    "id": "986ebeb6-409e-46c0-8826-66b947c10e3d"
   },
   {
     "companyOrSchool": "SEB / SEB Kort",
     "title": "Customer Service Advisor",
     "date": "Sep 2009 - May 2025",
     "desc": "After 15 years in different customer service advisor roles, I have a deep understanding of user needs, clear communication and a commitment to creating intuitive, helpful digital experiences.",
-    "isEducation": false
+    "isEducation": false,
+    "id": "84fcee8c-c390-4c5c-a482-e14c9ce92626"
   },
   {
     "companyOrSchool": "Nackademin Yrkeshögskola",
     "title": "Business IT",
     "date": "Aug 2007 - Jun 2009",
     "desc": "Higher Vocational Education Diploma - Economics and Marketing.",
-    "isEducation": true
+    "isEducation": true,
+    "id": "3dd9e98a-c9c9-4373-add3-c555f70df54d"
   }
 ]

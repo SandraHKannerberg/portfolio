@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { scrollToSection } from "@/lib/utils/animations";
 import { usePathname, useRouter } from "next/navigation";
-import { useScrollSpy } from "@/lib/utils/use-scroll-spy";
+import { useScrollSpy } from "@/hooks/use-scroll-spy";
 
 interface NavBarProps {
   className?: string;

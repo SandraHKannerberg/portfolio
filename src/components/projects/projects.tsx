@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 
-import { IProject } from "@/lib/interfaces";
+import { IProject } from "@/types";
 
-import data from "../../../public/data/projects-data.json";
+import data from "../../../public/data/projects.json";
 import ProjectsTimeline from "./projects-timeline";
 import { useGSAP } from "@gsap/react";
 import { animHeading } from "@/lib/utils/animations";

@@ -5,17 +5,17 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
-import data from "../../../public/data/experience-data.json";
-import { IExperience } from "@/lib/interfaces";
+import data from "../../../public/data/experience.json";
+import { IExperience } from "@/types";
 
 const ExperienceTimeline = () => {
   const experienceData = data as IExperience[];
 
   return (
     <VerticalTimeline>
-      {experienceData.map((exp, index) => (
+      {experienceData.map((exp) => (
         <VerticalTimelineElement
-          key={index}
+          key={exp.id}
           className="vertical-timeline-element--work"
           contentStyle={{ background: "#f2f2f2", color: "#303c31" }}
           contentArrowStyle={{ borderRight: "7px solid #f2f2f2" }}

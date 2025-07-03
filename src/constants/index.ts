@@ -1,4 +1,4 @@
-import { ILink } from "@/lib/interfaces";
+import { ILink } from "@/types/link";
 
 export const contactLinks: ILink[] = [
   {
