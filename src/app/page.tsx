@@ -5,7 +5,6 @@ import About from "@/components/about/about";
 import Work from "@/components/work/work-experience";
 import Skills from "@/components/skills/skills";
 import Projects from "@/components/projects/projects";
-import CvDownload from "@/components/work/cv-download";
 import Contact from "@/components/contact/contact";
 import { useGSAP } from "@gsap/react";
 import { fadeInOnScroll } from "@/lib/utils/animations";
@@ -28,7 +27,6 @@ export default function HomePage() {
         <main ref={containerRef} className="space-y-40 px-5">
           <About />
           <Work />
-          <CvDownload />
           <Skills />
           <Projects />
           <Contact />
