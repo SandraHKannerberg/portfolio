@@ -1,8 +1,16 @@
 [
   {
+    "companyOrSchool": "Fröjd Interactive AB",
+    "title": "Web Developer",
+    "date": "Sep 2025 - ongoing",
+    "desc": "Builds and maintains complete web applications by handling both client-side and server-side development, integrating user interfaces with backend systems, and ensuring performance, scalability, and reliability across the full technology stack. Collaborating closely in teams in an agile workflow.",
+    "isEducation": false,
+    "id": "01"
+  },
+  {
     "companyOrSchool": "Mojjo AB",
     "title": "Frontend Developer, Intern",
-    "date": "Apr 2025 - ongoing",
+    "date": "Apr 2025 - Aug 2025",
     "desc": "Contribute as a Frontend Developer to the project Boost By Mojjo. Collaborating closely with the team in an agile workflow, from the planning phase to building a new, innovative and inspiring platform for startups.",
     "isEducation": false,
     "id": "7c33c44d-f847-4333-abaa-86af35dcd543"
